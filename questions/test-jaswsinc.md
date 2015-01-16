@@ -4,7 +4,7 @@ categories: questions
 tags: logged-in-users
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/8
-test: 3
+test: 4
 ---
 
 > I see in my cache directory sub-directories that end in `.u`, such as `/category.u/`; what are those?
