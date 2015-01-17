@@ -8,6 +8,6 @@ github-issue: https://github.com/websharks/zencache-kb/issues/4
 
 The Nginx configuration that we recommend for ZenCache is the same as the configuration recommended for WordPress itself. Please see [the official Nginx and WordPress documentation](http://wiki.nginx.org/WordPress). 
 
-### A note about the `try_files` statement 
+#### A note about the `try_files` statement 
 
 If your Nginx configuration contains the `try_files` statement, you'll want to make sure that it is [configured properly](https://github.com/websharks/zencache-kb/issues/2), as we have seen WordPress and ZenCache issues related to a misconfiguration in this area of the Nginx configuration.
