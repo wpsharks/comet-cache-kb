@@ -1,12 +1,10 @@
 ---
-title: Migrating from Quick Cache Pro to ZenCache Pro
+title: How to Migrate from Quick Cache Pro to ZenCache Pro
 categories: tutorials
 tags: installation-upgrading
 author: jaswsinc
 github-issue: https://github.com/websharks/zencache-kb/issues/13
 ---
-
-## How to Migrate from Quick Cache Pro to ZenCache Pro
 
 https://www.youtube.com/watch?v=AXVJK_oyJg8
 
