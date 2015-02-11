@@ -28,6 +28,10 @@ No. All Quick Cache Pro customers receive a free upgrade to ZenCache Pro.
 
 Please Deactivate Quick Cache and/or Quick Cache Pro first (_don't_ delete the Quick Cache plugin until after you've installed ZenCache; that way your existing Quick Cache options will be preserved in ZenCache). Then, follow the instructions above to Install and Activate the new ZenCache Pro plugin. That's it! :-)
 
+### Can I delete Quick Cache Pro before installing ZenCache Pro?
+
+Yes. If you don't have any custom Quick Cache settings that you want ZenCache Pro to import, then deleting Quick Cache before installing ZenCache Pro will be fine.
+
 ### Will my old Quick Cache settings carry over to ZenCache?
 
 Yes. If you had Quick Cache Pro installed prior to installing ZenCache Pro, all of your Quick Cache Pro configuration options will be picked-up by ZenCache Pro automatically.
