@@ -40,6 +40,10 @@ You'll also now see a new "ZenCache" icon in the WordPress Dashboard Sidebar:
 
 You will need to disable Quick Cache and then install ZenCache. We recommend also clearing your Quick Cache cache and then deleting the plugin before installing ZenCache. Please see the full tutorial above under _How to Migrate from Quick Cache to ZenCache_.
 
+### Can I delete Quick Cache before installing ZenCache?
+
+Yes. If you don't have any custom Quick Cache settings that you want ZenCache to import, then deleting Quick Cache before installing ZenCache will be fine.
+
 ### Will my old Quick Cache settings carry over to ZenCache?
 
 Yes. If you had Quick Cache installed prior to installing ZenCache, all of your Quick Cache configuration options will be picked-up by ZenCache automatically.
