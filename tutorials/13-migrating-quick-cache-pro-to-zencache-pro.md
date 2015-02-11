@@ -8,14 +8,23 @@ github-issue: https://github.com/websharks/zencache-kb/issues/13
 
 https://www.youtube.com/watch?v=AXVJK_oyJg8
 
+## Step-by-Step: Migrating from Quick Cache Pro to ZenCache Pro
+
 1. Collect your existing account details for Quick Cache Pro. You will need your username/password for [websharks-inc.com](http://www.websharks-inc.com/); i.e., the old site that was for Quick Cache Pro. If you lost those details, you can [recover them here](https://www.websharks-inc.com/wp-login.php?action=lostpassword).
 
-2. Use those exact same login credentials to access an account that is _now waiting for you_ at ZenCache.com; i.e., please [log into ZenCache.com](https://zencache.com/wp-login.php) with your existing websharks-inc.com username/password. _This works for existing Quick Cache Pro customers only._ ![2015-02-04_18-20-37](https://cloud.githubusercontent.com/assets/1563559/6054499/92df2702-ac9a-11e4-8b91-c1a85a1f4d5c.png)
+2. Use those exact same login credentials to access an account that is _now waiting for you_ at ZenCache.com; i.e., please [log into ZenCache.com](https://zencache.com/wp-login.php) with your existing websharks-inc.com username/password. _This works for existing Quick Cache Pro customers only._
 
-3. Visit your [My Account page at ZenCache.com](http://zencache.com/account/), where you may now obtain a free copy of ZenCache Pro. Please download the `zencache-pro.zip` file from this page. ![2015-02-05_05-04-05](https://cloud.githubusercontent.com/assets/1563559/6061450/795993b2-acf4-11e4-802e-5d969a651662.png)
+     ![2015-02-04_18-20-37](https://cloud.githubusercontent.com/assets/1563559/6054499/92df2702-ac9a-11e4-8b91-c1a85a1f4d5c.png)
+
+3. Visit your [My Account page at ZenCache.com](http://zencache.com/account/), where you may now obtain a free copy of ZenCache Pro. Please download the `zencache-pro.zip` file from this page.
+
+     ![2015-02-05_05-04-05](https://cloud.githubusercontent.com/assets/1563559/6061450/795993b2-acf4-11e4-802e-5d969a651662.png)
 
 4. Now upload and activate `zencache-pro.zip` (or it might be named something like: `zencache-pro-vXXXXXX.zip`). You can upload the ZIP file using your WordPress Dashboard; i.e. `Dashboard ⥱ Plugins ⥱ Add New ⥱ Upload Plugin`. _See attached screenshots for example._ 
-![2015-02-05_05-08-28](https://cloud.githubusercontent.com/assets/1563559/6061535/11454c70-acf5-11e4-8439-2fcd036da63b.png)  ![2015-02-05_05-15-30](https://cloud.githubusercontent.com/assets/1563559/6061673/0e38bbb0-acf6-11e4-8cfd-eab2e564583a.png) ![2015-02-05_05-16-39](https://cloud.githubusercontent.com/assets/1563559/6061701/39386180-acf6-11e4-904a-57ae77088b55.png)
+
+     ![2015-02-05_05-08-28](https://cloud.githubusercontent.com/assets/1563559/6061535/11454c70-acf5-11e4-8439-2fcd036da63b.png)
+     ![2015-02-05_05-15-30](https://cloud.githubusercontent.com/assets/1563559/6061673/0e38bbb0-acf6-11e4-8cfd-eab2e564583a.png)
+     ![2015-02-05_05-16-39](https://cloud.githubusercontent.com/assets/1563559/6061701/39386180-acf6-11e4-904a-57ae77088b55.png)
 
 
 ## Frequently Asked Questions
