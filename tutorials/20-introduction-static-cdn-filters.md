@@ -24,7 +24,7 @@ Integrating a CDN for static files can dramatically improve the speed and perfor
 
 ![ncdn_-_cdn](http://cdn.websharks-inc.com/zencache/uploads/2015/02/ncdn-cdn.png)
 
-_["[NCDN - CDN](https://commons.wikimedia.org/wiki/File:NCDN_-_CDN.png#mediaviewer/File:NCDN_-_CDN.png)" by [Kanoha](https://commons.wikimedia.org/w/index.php?title=User:Kanoha&amp;action=edit&amp;redlink=1) - Own work. Licensed under [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) via [Wikimedia Commons](https://commons.wikimedia.org/wiki/)._
+_"[NCDN - CDN](https://commons.wikimedia.org/wiki/File:NCDN_-_CDN.png#mediaviewer/File:NCDN_-_CDN.png)" by [Kanoha](https://commons.wikimedia.org/w/index.php?title=User:Kanoha&amp;action=edit&amp;redlink=1) - Own work. Licensed under [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) via [Wikimedia Commons](https://commons.wikimedia.org/wiki/)._
 
 ### Which CDNs are Supported by ZenCache?
 
