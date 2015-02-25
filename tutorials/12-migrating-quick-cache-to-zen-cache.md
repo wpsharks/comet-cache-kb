@@ -7,7 +7,7 @@ github-issue: https://github.com/websharks/zencache-kb/issues/12
 toc-enable: true
 ---
 
-https://www.youtube.com/watch?v=-5GJZyR2AuA
+https://www.youtube.com/watch?v=8jFt_1mKqWo
 
 ## Step-by-Step: Migrating from Quick Cache ot ZenCache
 
