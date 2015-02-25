@@ -24,7 +24,7 @@ There are two ways to install ZenCache:
 
 ### Installing ZenCache via Downloaded Zip File
 
-1. Download the ZenCache plugin from WordPress.org or from ZenCache.com
+1. Download the ZenCache plugin from [WordPress.org](https://wordpress.org/plugins/zencache/) or from [ZenCache.com](https://zencache.com/account/)
 1. Log in to your WordPress Dashboard and Visit `Plugins ⥱ Add New`
 1. Click the `Upload Plugin` button
 1. (Optional Step) Now that you've deactivated the Quick Cache plugin, you can also Delete it, as there is no need to have both Quick Cache and ZenCache installed.
