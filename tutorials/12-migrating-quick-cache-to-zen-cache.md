@@ -7,6 +7,10 @@ github-issue: https://github.com/websharks/zencache-kb/issues/12
 toc-enable: true
 ---
 
+https://www.youtube.com/watch?v=-5GJZyR2AuA
+
+## Step-by-Step: Migrating from Quick Cache ot ZenCache
+
 When installing the ZenCache plugin, ZenCache will automatically detect and preserve your existing Quick Cache settings. Once ZenCache has been activated, Quick Cache will be deactivated. All of this happens automatically; all you need to do is install the ZenCache plugin.
 
 There are two ways to install ZenCache:
