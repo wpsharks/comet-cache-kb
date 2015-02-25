@@ -42,7 +42,7 @@ You will need to disable Quick Cache and then install ZenCache. We recommend als
 
 ### Can I delete Quick Cache before installing ZenCache?
 
-Yes. If you don't have any custom Quick Cache settings that you want ZenCache to import, then deleting Quick Cache before installing ZenCache will be fine.
+If you don't have any custom Quick Cache settings that you want ZenCache to import, then yes you can delete Quick Cache before installing ZenCache. Quick Cache _is not_ required to install ZenCache.
 
 ### Will my old Quick Cache settings carry over to ZenCache?
 
@@ -50,7 +50,7 @@ Yes. If you had Quick Cache installed prior to installing ZenCache, all of your 
 
 ### How do I install ZenCache if I already have Quick Cache installed?
 
-Please Deactivate Quick Cache and/or Quick Cache Pro first (_don't_ delete the Quick Cache plugin until after you've installed ZenCache; that way your existing Quick Cache options will be preserved in ZenCache). Then, follow the instructions above to Install and Activate the new ZenCache plugin. That's it! :-)
+When installing the ZenCache plugin, ZenCache will automatically detect and preserve your existing Quick Cache settings. Once ZenCache has been activated, Quick Cache will be deactivated. All of this happens automatically; all you need to do is install the ZenCache plugin. That's it! :-)
 
 ## Getting Help with Other Issues
 
