@@ -65,4 +65,4 @@ Please use a new license key for ZenCache Pro. You will find your new license ke
 
 ## Getting Help with Other Issues
 
-If after following all of the steps above, and reading over each of the FAQs, you find yourself with an issue that requires our assistance, please [open a support ticket here](http://zencache.com/support/).
+If after following all of the steps above, and reading over each of the FAQs, you find yourself with an issue that requires our assistance, please [open a support ticket here](http://zencache.com/support/); we're happy to help! :-)
