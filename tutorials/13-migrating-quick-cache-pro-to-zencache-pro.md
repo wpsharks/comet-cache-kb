@@ -10,6 +10,8 @@ https://www.youtube.com/watch?v=AXVJK_oyJg8
 
 ## Step-by-Step: Migrating from Quick Cache Pro to ZenCache Pro
 
+See also: [Announcing ZenCache™ (formerly Quick Cache)](http://zencache.com/announcing-zencache-formerly-quick-cache/).
+
 As an existing Quick Cache Pro customer, your Quick Cache Pro license entitles you to a free copy of ZenCache Pro. There is no need to purchase ZenCache Pro if you already own Quick Cache Pro. Please follow the steps below (or watch the video above) to use your existing customer account from WebSharks-Inc.com to login to ZenCache.com, where you'll be able to access ZenCache Pro and your free ZenCache Pro license.
 
 1. Collect your existing account details for Quick Cache Pro. You will need your username/password for [websharks-inc.com](http://www.websharks-inc.com/); i.e., the old site that was for Quick Cache Pro. If you lost those details, you can [recover them here](https://www.websharks-inc.com/wp-login.php?action=lostpassword).
