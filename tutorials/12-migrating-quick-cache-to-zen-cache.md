@@ -11,6 +11,8 @@ https://www.youtube.com/watch?v=8jFt_1mKqWo
 
 ## Step-by-Step: Migrating from Quick Cache to ZenCache
 
+See also: [Announcing ZenCache™ (formerly Quick Cache)](http://zencache.com/announcing-zencache-formerly-quick-cache/).
+
 When installing the ZenCache plugin, ZenCache will automatically detect and preserve your existing Quick Cache settings. Once ZenCache has been activated, Quick Cache will be deactivated. All of this happens automatically; all you need to do is install the ZenCache plugin.
 
 There are two ways to install ZenCache:
