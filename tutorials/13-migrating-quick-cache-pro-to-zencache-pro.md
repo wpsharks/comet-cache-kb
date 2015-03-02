@@ -6,7 +6,7 @@ author: jaswsinc
 github-issue: https://github.com/websharks/zencache-kb/issues/13
 ---
 
-https://www.youtube.com/watch?v=AXVJK_oyJg8
+https://www.youtube.com/watch?v=tqFnFiJpD-s
 
 ## Step-by-Step: Migrating from Quick Cache Pro to ZenCache Pro
 
