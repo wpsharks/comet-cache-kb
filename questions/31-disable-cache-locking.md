@@ -20,7 +20,7 @@ In such a scenario, you can try disabling cache locking.
 You will need to create a ZenCache Advanced Cache Plugin to disable cache locking. Please create this file and directory: `wp-content/ac-plugins/disable-cache-locking.php`:
 
 ```
-&lt;?php
+<?php
 if(!defined('WPINC')) // MUST have WordPress.
     exit('Do NOT access this file directly: '.basename(__FILE__));
 
@@ -31,7 +31,7 @@ function disable_cache_locking()
 }
 
 disable_cache_locking(); // Run this plugin.
-?&gt;
+?>
 ```
 
 Once you create that file inside `wp-content/ac-plugins/`, ZenCache will not do any cache locking. 
