@@ -31,7 +31,6 @@ function disable_cache_locking()
 }
 
 disable_cache_locking(); // Run this plugin.
-?>
 ```
 
 Once you create that file inside `wp-content/ac-plugins/`, ZenCache will not do any cache locking. 
