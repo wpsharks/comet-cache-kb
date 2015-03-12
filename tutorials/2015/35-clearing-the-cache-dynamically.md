@@ -6,13 +6,15 @@ author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/35
 ---
 
-ZenCache automatically handles updating the cache in many scenarios, such as when you publish a new post, or when you change your WordPress theme. However, there are many scenarios where you need to have finer control over when the cache is cleared, such as when a plugin or theme does not include support for WordPress caching plugins.
+ZenCache automatically handles updating the cache in many scenarios, such as when you publish a new post, or when you change your WordPress theme. However, there may be scenarios where you need to have finer control over when the cache is cleared, such as when a plugin or theme does not include support for WordPress caching plugins.
 
-The following examples use the [WordPress API hooks and filters](http://codex.wordpress.org/Plugin_API) system to call a custom function that will clear the cache when a specific event occurs. 
+The following examples use the [WordPress API hooks and filters](http://codex.wordpress.org/Plugin_API) system to call a custom function that will interface with ZenCache to clear the cache when a specific event occurs. 
 
-You can call any class method that is declared as a public function in `zencache.inc.php` or `zencache-pro.inc.php` using `$GLOBALS['zencache']->any_public_method()`.
+Using the technique described here, you can call any class method that is declared as a public function in `zencache.inc.php` or `zencache-pro.inc.php` using `$GLOBALS['zencache']->any_public_method()`.
 
-Note that while you can add this code to your theme's `functions.php` file or use a [Functionality Plugin](https://wordpress.org/plugins/functionality/), we recommend using a [WordPress Must-Use Plugin](http://codex.wordpress.org/Must_Use_Plugins) by creating a file like `wp-content/mu-plugins/zc-clear-cache.php` and then adding the necessary PHP code (note that if the `mu-plugins` directory doesn't exist, you should create it).
+### How to use the code examples
+
+While you can add this code to your theme's `functions.php` file or use a [Functionality Plugin](https://wordpress.org/plugins/functionality/), we recommend using a [WordPress Must-Use Plugin](http://codex.wordpress.org/Must_Use_Plugins) by creating a file like `wp-content/mu-plugins/zc-clear-cache.php` and then adding the necessary PHP code (note that if the `mu-plugins` directory doesn't exist, you should create it).
 
 What follows are a few examples of how you can clear the cache dynamically.
 
@@ -21,9 +23,9 @@ What follows are a few examples of how you can clear the cache dynamically.
 If you want to clear the cache every time a post is saved or updated (i.e., when the `save_post` action is fired), you can use the following:
 
 ```php
-add_action( 'save_post', 'my_custom_purge_cache', 10, 1 );
+add_action( 'save_post', 'my_custom_clear_cache', 10, 1 );
 
-function my_custom_purge_cache( ) {
+function my_custom_clear_cache( ) {
     $GLOBALS['zencache']->clear_cache();
 }
 ```
