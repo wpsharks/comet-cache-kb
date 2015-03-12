@@ -1,5 +1,5 @@
 ---
-title: How do I define my own temp directory for WordPress?
+title: How do I define a WordPress temp directory?
 categories: questions
 tags: error-messages
 author: raamdev
