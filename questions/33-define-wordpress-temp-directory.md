@@ -20,9 +20,9 @@ To fix this, you can define a custom temp directory specifically for WordPress a
 1. Give that custom temp directory permission for WordPress to write to (e.g., `755` or `777`)
 1. Tell WordPress to use your custom temp directory by adding the following to `wp-config.php`:
 
-     ```
+```
  define('WP_TEMP_DIR','/home/username/www/wp-content/temp');
-    ```
+ ```
 
 _Note: Replace `/home/username/www/wp-content/temp` with the full path to the temp directory on your server. Also, note that the line should be added above the line that says `/* That's all, stop editing! Happy blogging. */`_
 
