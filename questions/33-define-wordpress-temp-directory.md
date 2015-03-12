@@ -4,7 +4,7 @@ categories: questions
 tags: error-messages
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/33
-toc-enable: false
+toc-enable: off
 ---
 
 If your web host prevents WordPress from opening files in `/tmp/` (a common default temp directory for PHP), then you may receive an error like the following:
