@@ -24,7 +24,7 @@ Atomic disk writes; i.e., using a temp file followed by a rename when performing
 
 ## Cache Locked While Clearing/Purging
 
-ZenCache recently enhanced a portion of its codebase that deals with cache clearing/purging, and since there are now so many of these operations that can occur _while_ traffic is still hitting the front-end of a site; i.e., _while_ we are purging/clearing a temporary copy of the cache directory; there is a need for an exclusive lock during the few seconds when the occurs. We want to avoid a race condition on very busy sites. A cache lock allows ZenCache to do that.
+ZenCache recently enhanced a portion of its codebase that deals with cache clearing/purging, and since there are now so many of these operations that can occur _while_ traffic is still hitting the front-end of a site; i.e., _while_ we are purging/clearing a temporary copy of the cache directory; there is a need for an exclusive lock during the few seconds when this occurs. We want to avoid a race condition on very busy sites. A cache lock allows ZenCache to do that.
 
 For example, if we are purging files in a temporary copy of the cache directory from the back-end, we need to lock the cache directory on the front-end while this occurs. This process takes just a few seconds (usually less than one-tenth of a second), but that's still enough time for a problem to arise on a very busy site. It's not enough to _just_ use the temp file + rename methodology on its own. It needs to be coupled with an exclusive lock on the entire cache directory if we are to achieve perfection.
 
