@@ -6,9 +6,9 @@ author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/8
 ---
 
-> I see in my cache directory sub-directories that end in `.u`, such as `/category.u/`; what are those?
+**Question:** I see in my cache directory sub-directories that end in `.u`, such as `/category.u/`; what are those?
 
-The `/category/` sub-directory will be for any cache files for your category archive pages (such as `example.com/category/example-category/`). 
+**Answer:** The `/category/` sub-directory will be for any cache files for your category archive pages (such as `example.com/category/example-category/`). 
 
 The `/category.u/` sub-directory is for any user-specific cache files for category archive pages. It sounds like you have Logged-In User caching enabled (**Dashboard → Quick Cache → Plugin Options → Logged-In Users**) and this is set to `Yes, and maintain a separate cache for each user`. 
 
