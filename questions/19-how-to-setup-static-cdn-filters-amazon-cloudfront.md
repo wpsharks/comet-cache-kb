@@ -4,6 +4,7 @@ categories: questions
 tags: static-cdn-filters
 author: jaswsinc
 github-issue: https://github.com/websharks/zencache-kb/issues/19
+toc-enable: off
 ---
 
 https://www.youtube.com/watch?v=zxMTFixyP18
