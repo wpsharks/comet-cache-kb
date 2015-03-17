@@ -4,6 +4,7 @@ categories: questions
 tags: static-cdn-filters
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/38
+toc-enable: off
 ---
 
 If you just configured and enabled Static CDN Filters with a CDN such as Amazon CloudFront or MaxCDN, and now you're seeing broken images and/or missing styles on your site, then you may have enabled Static CDN Filters before the Distribution was ready.
