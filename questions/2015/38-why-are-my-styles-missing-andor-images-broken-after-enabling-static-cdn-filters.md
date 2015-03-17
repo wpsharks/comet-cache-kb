@@ -17,7 +17,7 @@ If Static CDN Filters are enabled _before_ the CDN has "Deployed" the Distributi
 
 What you need to do is wait until the Distribution's Status changes to "Deployed". Once the CDN has finished setting up the Distribution, you can enable Static CDN Filters and your images, CSS files, and JavaScript files will be properly served from the CDN.
 
-![2015-03-16_21-21-06](https://cloud.githubusercontent.com/assets/53005/6679715/9e922016-cc22-11e4-83a0-f0148317dca2.png)
+![2015-03-16_21-21-20](https://cloud.githubusercontent.com/assets/53005/6680019/e5504af0-cc27-11e4-84e9-a4fdd54eb2c3.png)
 
 ### What if the Distribution says "Deployed" but links are still broken?
 
