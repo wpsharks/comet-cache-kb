@@ -26,13 +26,13 @@ If you cannot get your web host to work correctly with the Pro Plugin Updater, o
      ![2015-03-19_12-54-37](https://cloud.githubusercontent.com/assets/53005/6736074/0102d11a-ce39-11e4-8536-a50b880455db.png)
      ![2015-03-19_12-56-06](https://cloud.githubusercontent.com/assets/53005/6736083/07335348-ce39-11e4-8de2-1fb4d537e55d.png)
 
-4. Now we need to **Deactivate** and then **Delete** the old ZenCache Pro plugin so that we can install the new version.
+4. Now we need to **Deactivate** and then **Delete** the old ZenCache Pro plugin so that we can install the new version. As long as the Plugin Deletion Safeguards are enabled (see previous step), you will not lose any of your existing ZenCache Options in this step.
 
      ![2015-03-19_12-57-44](https://cloud.githubusercontent.com/assets/53005/6736111/346f5960-ce39-11e4-9269-b6361d54fba9.png)
      ![2015-03-19_12-58-22](https://cloud.githubusercontent.com/assets/53005/6736114/361e6800-ce39-11e4-8916-2b569e3651c5.png)
      ![2015-03-19_12-58-41](https://cloud.githubusercontent.com/assets/53005/6736115/37f41134-ce39-11e4-904f-4b5d9b25b01b.png)
 
-5. Once the old version has been deleted, visit **WordPress Dashboard → Plugins → Add New** to upload and install the new version of ZenCache Pro.
+5. Once the old version has been deleted, you can upload and activate the latest version of ZenCache Pro, which you downloaded earlier. Visit **WordPress Dashboard → Plugins → Add New** to upload and install the new version of ZenCache Pro.
 
      ![2015-03-19_12-59-16](https://cloud.githubusercontent.com/assets/53005/6736137/58e42e38-ce39-11e4-9601-46567c76b03d.png)
 
