@@ -1,6 +1,6 @@
 ---
 title: How do I setup Static CDN Filters with CDN77?
-categories: tutorials
+categories: questions
 tags: static-cdn-filters
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/46
