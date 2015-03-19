@@ -10,6 +10,8 @@ In most cases, you can follow the [ZenCache Pro Installation](https://zencache.c
 
 If you cannot get your web host to work correctly with the Pro Plugin Updater, or if you have some other scenario that requires you to manually update ZenCache, then you can follow the instructions below to manually upgrade ZenCache Pro whenever an update is available.
 
+## Step-by-Step: Upgrading ZenCache Pro Manually
+
 1. [Log into ZenCache.com](https://zencache.com/wp-login.php) to download the latest version of ZenCache Pro.
 
      ![2015-02-04_18-20-37](https://cloud.githubusercontent.com/assets/1563559/6054499/92df2702-ac9a-11e4-8b91-c1a85a1f4d5c.png)
