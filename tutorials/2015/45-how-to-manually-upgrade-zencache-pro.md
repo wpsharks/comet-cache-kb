@@ -6,7 +6,7 @@ author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/45
 ---
 
-In most cases, you can follow the [ZenCache Pro Installation](https://zencache.com/pro-installation/) instructions the first time and then configure the Pro Plugin Updater (**WordPress Dashboard → ZenCache → Plugin Updater**) to keep ZenCache Pro updated. However, some web hosts [block Pro Plugin Updater from working correctly](https://zencache.com/kb-article/why-am-i-getting-a-404-error-when-running-the-pro-updater/). 
+In most cases, you can follow the [ZenCache Pro Installation](https://zencache.com/pro-installation/) instructions the first time and then configure the Pro Plugin Updater (**WordPress Dashboard → ZenCache → Plugin Updater**) to keep ZenCache Pro updated. However, some web hosts block the Pro Plugin Updater from working correctly, resulting in [a 404 error](https://zencache.com/kb-article/why-am-i-getting-a-404-error-when-running-the-pro-updater/). 
 
 If you cannot get your web host to work correctly with the Pro Plugin Updater, or if you have some other scenario that requires you to manually update ZenCache, then you can follow the instructions below to manually upgrade ZenCache Pro whenever an update is available.
 
