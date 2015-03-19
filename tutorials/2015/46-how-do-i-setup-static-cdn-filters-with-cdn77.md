@@ -6,8 +6,7 @@ author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/46
 toc-enable: off
 ---
-
-CDN77 is an alternative to Amazon CloudFront and MaxCDN and can be integrated with the ZenCache Pro Static CDN Filters. To integrate ZenCache with CDN77, you'll need to create an "HTTP CDN Resource" inside your CDN77 account and then supply ZenCache Pro with the "CDN URL" provided by CDN77.
+[CDN77](http://www.cdn77.com) is an alternative to Amazon CloudFront and MaxCDN and can be integrated with the ZenCache Pro Static CDN Filters. To integrate ZenCache with CDN77, you'll need to create an "HTTP CDN Resource" inside your CDN77 account and then supply ZenCache Pro with the "CDN URL" provided by CDN77.
 
 ## Step-by-Step: Integrating ZenCache Pro with CDN77
 
