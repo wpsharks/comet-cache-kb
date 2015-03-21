@@ -12,9 +12,7 @@ Static CDN Filters can greatly reduce the load on your server as all static reso
 
 If static resources change on your server (such as when you change you upgrade WordPress or change your theme), ZenCache will tell the CDN to fetch a new copy of the static resource so that the cache remains up-to-date.
 
-> Please explain in sequence how the files end up at Cloudfront, and how they are distributed to the Edge locations worldwide?
-
-## How it works (the technical details)
+## How It Works (the Technical Details)
 
 Whenever you create an Amazon Distribution or a MaxCDN Pull Zone (each CDN has its own terminology, but for this article we'll use Amazon CloudFront as an example), this is how it works:
 
