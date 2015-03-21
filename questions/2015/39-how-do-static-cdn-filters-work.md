@@ -10,7 +10,7 @@ When you enable ZenCache Static CDN Filters (**ZenCache → Plugin Options → S
 
 Static CDN Filters can greatly reduce the load on your server as all static resources (e.g., images, CSS files, JavaScript files) will be loaded from the CDN instead of being loaded from your server. A static resource will only be loaded from your server one time (so that the CDN can cache it).
 
-If static resources change on your server (such as when you change you upgrade WordPress or change your theme), ZenCache will tell the CDN to fetch a new copy of the static resource so that the cache remains up-to-date.
+If static resources change on your server (such as when you upgrade WordPress or change your theme), ZenCache will tell the CDN to fetch a new copy of the static resource so that the cache remains up-to-date.
 
 ## How It Works (the Technical Details)
 
