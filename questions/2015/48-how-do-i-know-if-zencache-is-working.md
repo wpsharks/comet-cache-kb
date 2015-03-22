@@ -16,7 +16,8 @@ Once you have verified that ZenCache is enabled and the HTML Notes option is tur
 <div class="li-margins"></div>
 - Internet Explorer: **View → Source**
 - Google Chrome: **View → Developer → View Source**
-- Safari: Visit **Safari → Preferences → Advanced** and enable "Show Developer menu in menu bar". Then you can visit **Developer → Show Page Source**
+- Mozilla Firefox: **Tools → Web Developer → Page Source**
+- Apple Safari: Visit **Safari → Preferences → Advanced** and enable "Show Developer menu in menu bar". Then you can visit **Developer → Show Page Source**
 
 You'll want to scroll all the way to the bottom of the source and look for the HTML Notes added by ZenCache. They should look something like this:
 
