@@ -45,3 +45,9 @@ _Note: if your CDN provides you with an option to enable "Query String Forwardin
 All static files on your site; everything. Of course, you have a lot of control over this too. ZenCache Pro exposes several configuration options that allow you to whitelist/blacklist certain file extensions and/or certain URIs.
 
 It's flexible enough that it can work with pretty much any combination of themes/plugins you like. In some cases you may need to add blacklist exclusions for certain plugins, but that should be a rare occurrence.
+
+---
+
+**See Also:**
+
+- [How do Static CDN Filters work?](http://zencache.com/kb-article/how-do-static-cdn-filters-work/)
