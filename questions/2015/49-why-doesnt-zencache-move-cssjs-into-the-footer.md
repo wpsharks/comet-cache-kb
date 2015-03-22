@@ -1,7 +1,7 @@
 ---
 title: Why doesn't ZenCache move CSS/JS scripts into the footer?
 categories: questions
-tags: html-compession
+tags: html-compression
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/49
 toc-enable: off
