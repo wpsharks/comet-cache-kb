@@ -1,5 +1,5 @@
 ---
-title: Why doesn't ZenCache move CSS/JS into the footer?
+title: Why doesn't ZenCache move CSS/JS scripts into the footer?
 categories: questions
 tags: html-compession
 author: raamdev
