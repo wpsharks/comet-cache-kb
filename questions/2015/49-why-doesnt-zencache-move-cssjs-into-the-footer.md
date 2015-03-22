@@ -28,3 +28,5 @@ It really needs to be determined by the plugin/theme developers to decide where 
 WordPress has a function used by many theme/plugin developers called: [wp_enqueue_script](http://codex.wordpress.org/Function_Reference/wp_enqueue_script), and this function accepts an argument called `$in_footer`. 
 
 If you set this to TRUE (or your theme/plugin developers set this to TRUE), then the ZenCache HTML Compressor can automatically detect this and there's no need to wrap Footer Scripts inside `<!-- footer-scripts -->` on your own.
+
+See also: [How can I move CSS/JS scripts into the footer?](http://zencache.com/kb-article/how-can-i-move-cssjs-scripts-into-the-footer/)
