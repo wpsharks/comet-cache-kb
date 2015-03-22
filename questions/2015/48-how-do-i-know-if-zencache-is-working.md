@@ -25,7 +25,7 @@ You'll want to scroll all the way to the bottom of the source and look for the H
 
 If you see "ZenCache fully functional", then you know ZenCache is enabled and working properly.
 
-### What if I just see blank lines at bottom?
+### What if I just see blank lines at the bottom?
 
 If you don't see any HTML Notes added by ZenCache but you do see several empty lines where you'd expect to the see the notes, then you could have another plugin or another service stripping out HTML Notes from your site. CloudFlare is known to do this when the "Minify" option is enabled, for example.
 
