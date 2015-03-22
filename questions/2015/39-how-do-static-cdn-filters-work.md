@@ -25,7 +25,7 @@ Whenever you create an Amazon Distribution or a MaxCDN Pull Zone (each CDN has i
 
 ![zencache-static-cdn-filters-enable-disable](https://cloud.githubusercontent.com/assets/53005/6723895/46153582-cdc5-11e4-9b17-b82bdf399a6f.png)
 
-What happens next occurs on the CDN side. Whenever `xxxxxxxx.cloudfront.net/my-image.png?iv=1` is accessed for the first time, your CDN visits `www.mysite.com/my-image.png` silently behind-the-scenes. It pulls the file from your server (the "Origin ServeR") and caches it across its global network of servers (Edge Locations); and then it serves the file as expected. Future requests for `xxxxxxxx.cloudfront.net/my-image.png?iv=1` are much faster, because the CDN has already cached it.
+What happens next occurs on the CDN side. Whenever `xxxxxxxx.cloudfront.net/my-image.png?iv=1` is accessed for the first time, your CDN visits `www.mysite.com/my-image.png` silently behind-the-scenes. It pulls the file from your server (the "Origin Server") and caches it across its global network of servers (Edge Locations); and then it serves the file as expected. Future requests for `xxxxxxxx.cloudfront.net/my-image.png?iv=1` are much faster, because the CDN has already cached it.
 
 Changing `xxxxxxxx.cloudfront.net/my-image.png?iv=1` to `xxxxxxxx.cloudfront.net/my-image.png?iv=2` (i.e., changing the `?iv=1` part of the URL to `?iv=2`) alters the resource URL, which forces the CDN to pull the file from your server again whenever that altered URL is accessed for the first time. Thus, whenever ZenCache needs to update the CDN cache, it simply bumps the internal `?iv` counter by 1.
 
