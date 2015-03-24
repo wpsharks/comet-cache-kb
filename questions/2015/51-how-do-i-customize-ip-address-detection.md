@@ -4,6 +4,7 @@ categories: questions
 tags: themeplugin-developers
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/51
+toc-enable: off
 ---
 
 When detecting the remote IP address, ZenCache uses the following lookup order, where each source is an array key in the [`$_SERVER` superglobal](http://php.net/manual/en/reserved.variables.server.php). We use the first public IP address found in these headers, starting from the top and working down.
