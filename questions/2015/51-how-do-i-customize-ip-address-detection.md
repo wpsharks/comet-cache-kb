@@ -7,7 +7,7 @@ github-issue: https://github.com/websharks/zencache-kb/issues/51
 toc-enable: off
 ---
 
-When detecting the remote IP address, ZenCache uses the following lookup order, where each source is an array key in the [`$_SERVER` superglobal](http://php.net/manual/en/reserved.variables.server.php). We use the first public IP address found in these headers, starting from the top and working down.
+When detecting the remote IP address, ZenCache uses the following lookup order, where each source is an array key in the [`$_SERVER` superglobal](http://php.net/manual/en/reserved.variables.server.php). We use the first public IPv4 or IPv6 address found in these headers, starting from the top and working down.
 
 ```text
 'HTTP_CF_CONNECTING_IP',
@@ -15,7 +15,7 @@ When detecting the remote IP address, ZenCache uses the following lookup order, 
 'HTTP_X_FORWARDED_FOR',
 'HTTP_X_FORWARDED',
 'HTTP_X_CLUSTER_CLIENT_IP',
-'HTTP_FORWARDED_FOR',
+'HTTP_FORWARDED_FOR',w
 'HTTP_FORWARDED',
 'HTTP_VIA',
 'REMOTE_ADDR',
