@@ -1,5 +1,5 @@
 ---
-title: How do I prioritize $_SERVER['REMOTE_ADDR'] during IP address detection?
+title: How do I cusotmize IP address detection?
 categories: questions
 tags: themeplugin-developers
 author: raamdev
