@@ -1,5 +1,5 @@
 ---
-title: How do I cusotmize IP address detection?
+title: How do I customize IP address detection?
 categories: questions
 tags: themeplugin-developers
 author: raamdev
