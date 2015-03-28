@@ -6,7 +6,7 @@ author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/55
 ---
 
-If you restore a Post/Page from the Trash and you see a message about a cache file being cleared for that Post/Page ID, you likely have 404 Request Caching enabled (see **ZenCache → Plugin Options → 404 Requests**).
+If you restore a Post/Page from the Trash and you see a message about a cache file being cleared for that Post/Page ID, you likely have 404 Request Caching enabled (see **WordPress Dashboard → ZenCache → Plugin Options → 404 Requests**).
 
 ![2015-03-27_21-20-48](https://cloud.githubusercontent.com/assets/53005/6879280/9176b6d2-d4c7-11e4-9db0-42b72b4811fa.png)
 
