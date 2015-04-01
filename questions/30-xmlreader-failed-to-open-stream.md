@@ -1,5 +1,5 @@
 ---
-title: What is "XMLReader::open() failed to open stream: no suitable wrapper"?
+title: 'What is "XMLReader::open() failed to open stream: no suitable wrapper"?'
 categories: questions
 tags: auto-cache-engine
 author: raamdev
