@@ -1,12 +1,12 @@
 ---
-title: 'What is "XMLReader::open() failed to open stream: HTTP request failed!"?'
+title: 'What is "XMLReader::open() failed to open stream: HTTP request failed"?'
 categories: questions
 tags: auto-cache-engine
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/59
 ---
 
-**Question:** What is "XMLReader::open() failed to open stream: HTTP request failed!"?
+**Question:** What is "XMLReader::open() failed to open stream: HTTP request failed"?
 
 **Answer:** It sounds like the server where your website is hosted is misconfigured, or does not allow WordPress to connect to itself. The ZenCache Auto-Cache Engine needs to read your XML Sitemap (e.g., `http://example.com/sitemap.xml`) so that it can find all the pages on your site and cache them.
 
