@@ -7,7 +7,7 @@ github-issue: https://github.com/websharks/zencache-kb/issues/61
 toc-enable: off
 ---
 
-Many speed testing services such as Google PageSpeed and GTMetrix will reduce your overall score if you don't "Remove Query Strings From Static Resources". What these services don't consider, however, is that dynamic sites that run a Content Management System (CMS) such as WordPress _must_ use query strings for static resources to ensure that everything stays up-to-date.
+Many speed testing services such as Google PageSpeed and GTMetrix will reduce your overall score if you don't "Remove Query Strings From Static Resources". What these services don't consider, however, is that a dynamic site running a Content Management System (CMS) such as WordPress _must_ use query strings for static resources to ensure that everything stays up-to-date.
 
 This dependency on query strings is build right into the WordPress functions used by plugin and theme developers to load JavaScript files ([`wp_enqueue_script()`](https://codex.wordpress.org/Function_Reference/wp_enqueue_script) and CSS files ([`wp_enqueue_style()`](https://codex.wordpress.org/Function_Reference/wp_enqueue_style)): both include a Version Parameter, which allows the plugin or theme developer to specify the version number of the file being loaded. That version number then gets appended to the static resource link as a query string (e.g., `theme-style.css?ver=1.5`).
 
