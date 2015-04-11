@@ -4,9 +4,10 @@ categories: questions
 tags: installation-upgrading
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/60
+toc-enable: off
 ---
 
-If you cannot [install or upgrade ZenCache Pro via the WordPress Dashboard](http://zencache.com/kb-article/how-to-manually-upgrade-zencache-pro/), 
+If you cannot [install or upgrade ZenCache Pro via the WordPress Dashboard](http://zencache.com/kb-article/how-to-manually-upgrade-zencache-pro/), perhaps because your web hosting company is blocking the requests to WebSharks' servers (see [Why am I getting a 404 error?](https://zencache.com/kb-article/why-am-i-getting-a-404-error-when-running-the-pro-updater/)), then you may need to use FTP/SFTP to install or upgrade ZenCache Pro.
 
 1. If you are upgrading ZenCache, visit **WordPress Dashboard → ZenCache → Plugin Options → Plugin Deletion Safeguards** first and make sure that "Safeguard my options" is selected; this will ensure that you don't lose any of your existing ZenCache configuration when upgrading.
 1. Deactivate and delete ZenCache, if it is currently installed.
