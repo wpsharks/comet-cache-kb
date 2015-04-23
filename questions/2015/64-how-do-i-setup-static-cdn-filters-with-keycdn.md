@@ -4,6 +4,7 @@ categories: questions
 tags: static-cdn-filters
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/64
+toc-enable: off
 ---
 
 [KeyCDN](https://www.keycdn.com) is an alternative to Amazon CloudFront and MaxCDN that can be integrated with ZenCache Pro through the Static CDN Filters. To integrate ZenCache with KeyCDN, you'll need to create a new Zone inside your KeyCDN account with a Zone Type of "Pull" and then supply ZenCache Pro with the Zone "URL" provided by KeyCDN.
