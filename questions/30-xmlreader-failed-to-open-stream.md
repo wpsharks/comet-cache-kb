@@ -1,7 +1,7 @@
 ---
 title: 'What is "XMLReader::open() failed to open stream: no suitable wrapper"?'
 categories: questions
-tags: auto-cache-engine
+tags: auto-cache-engine, error-messages
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/30
 ---
