@@ -1,7 +1,7 @@
 ---
 title: Introduction to Dynamic Version Salts
 categories: tutorials
-tags: dynamic-version-salt
+tags: dynamic-version-salt, themeplugin-developers
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/21
 ---
