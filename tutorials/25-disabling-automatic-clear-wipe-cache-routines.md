@@ -1,7 +1,7 @@
 ---
 title: Disabling Automatic Clear / Wipe Cache Routines
 categories: tutorials
-tags: clearing-the-cache
+tags: clearing-the-cache, mu-plugins-hacks
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/25
 ---
