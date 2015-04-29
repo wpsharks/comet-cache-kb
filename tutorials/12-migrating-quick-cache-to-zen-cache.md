@@ -56,7 +56,7 @@ Yes. If you had Quick Cache installed prior to installing ZenCache, all of your 
 
 ### If I had plugins/themes that were customized to integrate with Quick Cache, will those customizations still work with ZenCache?
 
-Most likely, yes. We have build ZenCache to be backwards-compatible with Quick Cache so if you were using the Quick Cache API (`$GLOBALS['quick_cache']`), or using the `QUICK_CACHE_ALLOWED` constant, these will still work with ZenCache. 
+Most likely, yes. We have built ZenCache to be backwards-compatible with Quick Cache so if you were using `$GLOBALS['quick_cache']` or using the `QUICK_CACHE_ALLOWED` constant, these will still work with ZenCache. 
 
 ### How do I install ZenCache if I already have Quick Cache installed?
 
