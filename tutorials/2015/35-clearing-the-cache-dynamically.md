@@ -1,7 +1,7 @@
 ---
 title: Clearing the Cache Dynamically
 categories: tutorials
-tags: clearing-the-cache
+tags: clearing-the-cache, mu-plugins-hacks, themeplugin-developers
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/35
 ---
