@@ -49,6 +49,10 @@ Yes. If you don't have any custom Quick Cache settings that you want ZenCache Pr
 
 Yes. If you had Quick Cache Pro installed prior to installing ZenCache Pro, all of your Quick Cache Pro configuration options will be picked-up by ZenCache Pro automatically.
 
+### If I had plugins/themes that were customized to integrate with Quick Cache, will those customizations still work with ZenCache?
+
+Most likely, yes. We have build ZenCache to be backwards-compatible with Quick Cache so if you were using the Quick Cache API (`$GLOBALS['quick_cache']`), or using the `QUICK_CACHE_ALLOWED` constant, these will still work with ZenCache. 
+
 ### What if I don't remember my account details for Quick Cache Pro?
 
 See **Step 1** above. You will need your username/password for [websharks-inc.com](http://www.websharks-inc.com/); i.e., the old site that was for Quick Cache Pro. If you lost those details, you can [recover them here](https://www.websharks-inc.com/wp-login.php?action=lostpassword). You should [log into the new site at ZenCache.com](https://zencache.com/wp-login.php) using the same credentials that you use at websharks-inc.com.
