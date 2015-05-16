@@ -7,7 +7,7 @@ github-issue: https://github.com/websharks/zencache-kb/issues/70
 toc-enable: off
 ---
 
-When the ZenCache Static CDN Filters are enabled, ZenCache will attempt to rewrite all static resource URLs on your site so that those resources point to the configured CDN. If some of your static resource URLs are not changing and you've verified that those file extensions have not been excluded via the Static CDN Filters **Blacklisted File Extensions** or **Blacklisted URI Exclusion Patterns**, then your WordPress theme and/or one or more of your WordPress plugins may not be implementing WordPress standard coding practices and therefore preventing ZenCache from rewriting those URLs.
+When the ZenCache Static CDN Filters are enabled, ZenCache will attempt to rewrite all static resource URLs on your site so that those resources point to the configured CDN. If some of your static resource URLs are not changing and you've verified that those file extensions and URIs have not been excluded via the **Blacklisted File Extensions** or **Blacklisted URI Exclusion Patterns** (see **WordPress Dashboard → ZenCache → Plugin Options → Static CDN Filters**), then your WordPress theme, and/or one or more of your WordPress plugins, may not be implementing proper WordPress coding standards, thereby preventing ZenCache from properly rewriting those URLs.
 
 The [WordPress Plugin API](https://codex.wordpress.org/Plugin_API) provides many hooks that allow other WordPress plugins, such as ZenCache, to "filter" the values of things (such as URLs) so that they can be changed in a dynamic way. However, if a WordPress theme or plugin does not implement the Plugin API, then other plugins (such as ZenCache) won't be able to change any of that content (e.g., a URL).
 
@@ -29,4 +29,6 @@ Here are the most common functions used when constructing links to static resour
 
 If a theme or plugin developer follows best-practice and uses these functions when building links to static resources, the ZenCache Static CDN Filters won't have any problem rewriting the URLs to use the CDN.
 
-If you are experiencing an issue with the ZenCache Static CDN Filters not rewriting all URLs to your static resources, we suggest contacting your theme/plugin developer to inform them of this issue with their theme/plugin and referencing this KB Article.
+## How can I fix my theme or plugin?
+
+If you are experiencing an issue with the ZenCache Static CDN Filters not rewriting all URLs to your static resources, we suggest contacting your theme/plugin developer to inform them of this issue with their theme/plugin. You can reference this KB Article when contacting them.
