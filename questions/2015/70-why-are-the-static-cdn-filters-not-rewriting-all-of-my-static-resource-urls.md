@@ -4,6 +4,7 @@ categories: questions
 tags: static-cdn-filters
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/70
+toc-enable: off
 ---
 
 When the ZenCache Static CDN Filters are enabled, ZenCache will attempt to rewrite all static resource URLs on your site so that those resources point to the configured CDN. If some of your static resource URLs are not changing and you've verified that those file extensions have not been excluded via the Static CDN Filters **Blacklisted File Extensions** or **Blacklisted URI Exclusion Patterns**, then your WordPress theme and/or one or more of your WordPress plugins may not be implementing WordPress standard coding practices and therefore preventing ZenCache from rewriting those URLs.
