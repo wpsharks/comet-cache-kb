@@ -1,7 +1,7 @@
 ---
 title: Is ZenCache compatible with E-Commerce plugins (such as WooCommerce)?
 categories: questions
-tags: 
+tags: themeplugin-developers
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/77
 toc-enable: off
