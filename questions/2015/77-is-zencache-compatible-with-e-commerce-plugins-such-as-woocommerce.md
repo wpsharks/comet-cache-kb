@@ -4,6 +4,7 @@ categories: questions
 tags: 
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/77
+toc-enable: off
 ---
 
 Yes, ZenCache is compatible with WooCommerce and any other WordPress E-Commerce plugin that utilizes the standard method of notifying WordPress caching plugins that a specific page must not be cached. This is done using the following line of PHP code:
