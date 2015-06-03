@@ -10,7 +10,7 @@ toc-enable: off
 Yes, ZenCache is compatible with WooCommerce and any other WordPress E-Commerce plugin that utilizes the standard method of notifying WordPress caching plugins that a specific page must not be cached. This is done using the following line of PHP code:
 
 ```php
-define('DONOTCACHEPAGE', TRUE);`
+define('DONOTCACHEPAGE', TRUE);
 ```
 
 WordPress plugins such as WooCommerce, which may generate pages that are _always_ dynamic (such as a 'checkout' page in an e-commerce system), are required to use an agreed upon method of telling any WordPress caching plugins on the site to disable caching for that specific page. This 'agreed upon method' is the `DONOTCACHEPAGE` PHP constant. 
