@@ -33,4 +33,4 @@ To uninstall ZenCache or ZenCache Pro via FTP, follow these steps:
 1. Delete the `zencache` or `zencache-pro` directory from inside `wp-content/plugins/`
 1. Delete the `zencache` directory from inside `wp-content/cache/`
 
-The ZenCache plugin has now been removed. Note that removing the plugin manually does not erase any of the plugin options inside the WordPress database. To erase those options, you must disable Plugin Deletion Safeguards and Deactivate/Delete the plugin from the WordPress Dashboard.
+The ZenCache plugin has now been removed. Note that removing the plugin manually does not erase any of the plugin options from within the WordPress database. To erase those options, you must disable Plugin Deletion Safeguards and Deactivate/Delete the plugin from the WordPress Dashboard.
