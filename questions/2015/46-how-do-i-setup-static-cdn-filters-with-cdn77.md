@@ -41,3 +41,11 @@ toc-enable: off
      ![2015-03-19_15-47-23](https://cloud.githubusercontent.com/assets/53005/6739569/d405e6b8-ce4f-11e4-9461-65290acdab75.png)
 
 That's it! ZenCache Pro is now configured with your CDN77 account. If you logout of your WordPress Dashboard and visit your site, you'll see that all static resources (CSS files, JavaScript files, images, etc.) are loaded with URLs that start with something like `http://579346857.r.cdn77.net/`, which indicates that the ZenCache Pro CDN Integration is now working.
+
+---
+
+**See Also:**
+
+- [Introduction to Static CDN Filters](http://zencache.com/kb-article/introduction-to-static-cdn-filters/)
+- [How do Static CDN Filters work?](http://zencache.com/kb-article/how-do-static-cdn-filters-work/)
+- [Static CDN Filters for WordPress Multisite Networks](http://zencache.com/kb-article/static-cdn-filters-for-wordpress-multisite-networks/)
