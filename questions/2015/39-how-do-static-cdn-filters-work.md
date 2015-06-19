@@ -59,6 +59,5 @@ You should check your Apache error logs for any communication failures that have
 
 **See Also:**
 
-- [How do Static CDN Filters work?](http://zencache.com/kb-article/how-do-static-cdn-filters-work/)
 - [Introduction to Static CDN Filters](http://zencache.com/kb-article/introduction-to-static-cdn-filters/)
 - [Static CDN Filters for WordPress Multisite Networks](http://zencache.com/kb-article/static-cdn-filters-for-wordpress-multisite-networks/)
