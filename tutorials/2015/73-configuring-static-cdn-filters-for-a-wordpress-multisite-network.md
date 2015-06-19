@@ -1,13 +1,9 @@
 ---
 title: Configuring Static CDN Filters for a WordPress Multisite Network
 categories: tutorials
-tags: static-cdn-filters
+tags: static-cdn-filters, wp-multisite
 author: raamdev
 github-issue: https://github.com/websharks/zencache-kb/issues/73
----
-
-[See notes [here](https://github.com/websharks/zencache/issues/468#issuecomment-104441570) from Jason.]
-
 ---
 
 The ZenCache Static CDN Filters are fully compatible with WordPress Multisite Networks and this KB Article will outline a few common Multisite Network scenarios and offer suggestions for how to configure the Static CDN Filters for your specific scenario. 
