@@ -24,7 +24,7 @@ If your Multisite Network is running with Sub-Directories, you only have a singl
 
 When you're running a WordPress Multisite Network in sub-directory mode, the only reason you would configure multiple CDN domain names is to take advantage of [Domain Sharding](http://zencache.com/r/domain-sharding/).
 
-![2015-06-19_17-49-36](https://cloud.githubusercontent.com/assets/53005/8263737/c3a8bcc4-16ab-11e5-85d9-92f0f020ae90.png)
+![2015-06-19_17-49-36](https://cloud.githubusercontent.com/assets/53005/8264024/3bc99ff4-16af-11e5-8835-23a671cc43ea.png)
 
 Domain Sharing allows you distribute your static resources to multiple CDN domain names, thereby increasing performance by working around concurrency limits in popular browsers; i.e., making it possible for browsers to download many more resources simultaneously, resulting in a faster overall completion time. 
 
