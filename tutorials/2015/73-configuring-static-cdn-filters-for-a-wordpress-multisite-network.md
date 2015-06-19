@@ -30,7 +30,7 @@ Domain Sharing allows you distribute your static resources to multiple CDN domai
 
 ## WordPress Multisite w/ Sub-Domains
 
-If you are running a WordPress Multisite Network with Sub-Domains, you can define a list of sub-domains with their corresponding CDN hostname. ZenCache will then use the respective CDN hostname when rewriting static resource URLs on that sub-domain.
+If you are running a WordPress Multisite Network with Sub-Domains (i.e., your child sites all have their own sub-domain address like `child1.example.com`, `child2.example.com`, etc.), you can define a list of sub-domains with their corresponding CDN hostname to map a specific CDN hostname to that sub-domain. ZenCache will then use the respective CDN hostname when rewriting static resource URLs on that sub-domain.
 
 If you only want to enable the Static CDN Filters for the primary domain (e.g., `example.com`), then you can simply specify a primary domain CDN mapping and skip the sub-domain mappings.
 
@@ -38,7 +38,7 @@ If you only want to enable the Static CDN Filters for the primary domain (e.g., 
 
 ## WordPress Multisite w/ Domain Mapping
 
-If you're using Domain Mapping and you want to enable Static CDN Filters on the mapped domains, simply supply a list of mapped domains with their corresponding CDN hostname.
+If you're using Domain Mapping (i.e., your sub-domain sites are mapped to their own top-level domains, such as `example1.com`, `example2.com`, etc.) and you want to enable Static CDN Filters on the mapped domains, simply supply a list of mapped domains with their corresponding CDN hostname.
 
 If you only want to enable the Static CDN Filters for the primary domain (e.g., `example.com`), then you can simply specify a primary domain CDN mapping and skip the sub-domain mappings.
 
