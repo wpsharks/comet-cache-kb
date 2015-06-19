@@ -51,3 +51,4 @@ It's flexible enough that it can work with pretty much any combination of themes
 **See Also:**
 
 - [How do Static CDN Filters work?](http://zencache.com/kb-article/how-do-static-cdn-filters-work/)
+- [Static CDN Filters for WordPress Multisite Networks](http://zencache.com/kb-article/static-cdn-filters-for-wordpress-multisite-networks/)
