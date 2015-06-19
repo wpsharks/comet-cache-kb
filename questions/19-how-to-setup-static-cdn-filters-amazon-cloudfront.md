@@ -12,3 +12,5 @@ https://www.youtube.com/watch?v=zxMTFixyP18
 ### See also:
 
 - [Introduction to Static CDN Filters](http://zencache.com/kb-article/introduction-to-static-cdn-filters/)
+- [How do Static CDN Filters work?](http://zencache.com/kb-article/how-do-static-cdn-filters-work/)
+- [Static CDN Filters for WordPress Multisite Networks](http://zencache.com/kb-article/static-cdn-filters-for-wordpress-multisite-networks/)
