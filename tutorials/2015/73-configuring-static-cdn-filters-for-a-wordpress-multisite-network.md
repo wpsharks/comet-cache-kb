@@ -1,5 +1,5 @@
 ---
-title: Configuring Static CDN Filters for a WordPress Multisite Network
+title: Static CDN Filters for WordPress Multisite Networks
 categories: tutorials
 tags: static-cdn-filters, wp-multisite
 author: raamdev
