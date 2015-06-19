@@ -54,3 +54,11 @@ If you're using a different CDN provider, you should check the documentation on 
 Hits and Misses are normal behavior; i.e., expected to occur. Errors not so much. Based on a `10%`+ error report I'd say that you are running into trouble somewhere. Perhaps with a configured limit, or a problem with connectivity between your site and the CDN servers. 
 
 You should check your Apache error logs for any communication failures that have occurred whenever the CDN attempted to cache a static file. If you need assistance with this, please contact your web hosting company.
+
+---
+
+**See Also:**
+
+- [How do Static CDN Filters work?](http://zencache.com/kb-article/how-do-static-cdn-filters-work/)
+- [Introduction to Static CDN Filters](http://zencache.com/kb-article/introduction-to-static-cdn-filters/)
+- [Static CDN Filters for WordPress Multisite Networks](http://zencache.com/kb-article/static-cdn-filters-for-wordpress-multisite-networks/)
