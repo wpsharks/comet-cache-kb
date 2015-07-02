@@ -7,7 +7,7 @@ toc-enable: off
 github-issue: https://github.com/websharks/zencache-kb/issues/81
 ---
 
-The Auto-Cache Engine, when enabled, is scheduled to run every 15 minutes. If you want to run the Auto-Cache Engine manually, or if you want to create your own CRON job to define a custom schedule using a plugin such as WP-Crontrol, you can do so by adding `?zencache_auto_cache_cron=1` to the end of your site's URL.
+The Auto-Cache Engine, when enabled, is scheduled to run every 15 minutes. If you want to run the Auto-Cache Engine manually, or if you want to create your own CRON job to define a custom schedule using a plugin such as [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/), you can do so by adding `?zencache_auto_cache_cron=1` to the end of your site's URL.
 
 For example, if your site was `yoursite.com`, you could run the Auto-Cache Engine by calling the following URL:
 
