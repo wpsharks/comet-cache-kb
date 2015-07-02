@@ -11,7 +11,7 @@ The Auto-Cache Engine, when enabled, is scheduled to run every 15 minutes. If yo
 
 For example, if your site was `yoursite.com`, you could run the Auto-Cache Engine by calling the following URL:
 
-```
+```text
 http://yoursite.com/?zencache_auto_cache_cron=1
 ```
 
