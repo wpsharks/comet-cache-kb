@@ -7,7 +7,7 @@ github-issue:
 github-issue: https://github.com/websharks/zencache-kb/issues/83
 ---
 
-We discovered several major issues with the APC extension that were resulting in fatal errors on some of our customers' sites. The PHP APC extension is outdated and buggy (the last update to the APC extension was 2012) and the PHP community has since abandoned development of the APC extension in favor of the newer [Opcache extension](http://php.net/manual/en/book.opcache.php). To prevent ZenCache from triggering this bug in APC extension (any plugin that uses Closures in its code can trigger the fatal APC bug), we are now showing a warning message to site owners who try to activate ZenCache on a site that has the old APC extesnion enabled.
+We discovered several major issues with the APC extension that were resulting in fatal errors on some of our customers' sites. The PHP APC extension is outdated and buggy (the last update to the APC extension was 2012) and the PHP community has since abandoned development of the APC extension in favor of the newer [Opcache extension](http://php.net/manual/en/book.opcache.php). To avoid the possibility of ZenCache triggering this bug in APC, we are now showing a warning message to site owners who try to activate ZenCache on a site that has the old APC extesnion enabled. (Note: Any WordPress plugin that uses Closures in its codebase is at risk of triggering the fatal APC bug, so updating to the newer Opcache extension is highly recommended.)
 
 Shortly after releasing ZenCache v150626 in June 2015, we began receiving sporadic reports that the new version was resulting in Fatal PHP Errors. However, the issue only seemed to affect a subset of ZenCache users and not everyone. 
 
