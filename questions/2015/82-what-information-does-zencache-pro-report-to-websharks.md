@@ -32,6 +32,10 @@ To disable the anonymous stats collection, create an [MU-Plugin](http://codex.wo
 add_filter('zencache_statsLogPinger_enable', '__return_false');
 ```
 
+### Can I inspect the code used to collect and report this information?
+
+Yes, absolutely. All of the ZenCache Pro code is open-source and available for inspection. You'll find the relevant code in `src/includes/closures/Plugin/StatsUtils.php`.
+
 ### Where are you storing this information?
 
 The anonymous information is stored securely on a WebSharks server, secured using modern security features. Here's the schema for the database table we use to store the reported information:
@@ -52,7 +56,3 @@ CREATE TABLE IF NOT EXISTS `wp_product_stats` (
   UNIQUE KEY `unique_entry` (`week_time`,`ip_md5`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 ```
-
-### Can I inspect the code used to collect and report this information?
-
-Yes, absolutely. All of the ZenCache Pro code is open-source and available for inspection. You'll find the relevant code in `src/includes/closures/Plugin/StatsUtils.php`.
