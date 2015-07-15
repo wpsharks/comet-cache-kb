@@ -19,11 +19,11 @@ The following information is what ZenCache Pro collects and reports to WebSharks
 - Product Version (e.g., `150709`)
 - Product Name (e.g., `ZenCache Pro`)
 
-### Why is WebSharks collecting this information?
+## Why is WebSharks collecting this information?
 
 We use this information to help us make decisions about what versions of PHP, MySQL, WordPress, etc; that we should put our focus on. Ideally, we would always build our software products in a way that optimizes them for the latest versions of PHP/MySQL. However, unless and until we can be relatively certain that our customers are running on servers that are up-to-date, we hold off on doing so. Thus, gathering these statistics helps us make decisions about what/how we write code.
 
-### How can I opt-out?
+## How can I opt-out?
 
 To disable the anonymous stats collection, create an [MU-Plugin](http://codex.wordpress.org/Must_Use_Plugins) with the following filter:
 
@@ -32,11 +32,11 @@ To disable the anonymous stats collection, create an [MU-Plugin](http://codex.wo
 add_filter('zencache_statsLogPinger_enable', '__return_false');
 ```
 
-### Can I inspect the code used to collect and report this information?
+## Can I inspect the code used to collect and report this information?
 
 Yes, absolutely. All of the ZenCache Pro code is open-source and available for inspection. You'll find the relevant code in `src/includes/closures/Plugin/StatsUtils.php`.
 
-### Where are you storing this information?
+## Where are you storing this information?
 
 The anonymous information is stored securely on a WebSharks server, secured using modern security features. Here's the schema for the database table we use to store the reported information:
 
@@ -56,3 +56,7 @@ CREATE TABLE IF NOT EXISTS `wp_product_stats` (
   UNIQUE KEY `unique_entry` (`week_time`,`ip_md5`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 ```
+
+## Does ZenCache Lite collect stats?
+
+No. The lite version (i.e., the version of ZenCache available at WordPress.org) does not collect statistics like this. Stats are collected when using ZenCache Pro only.
