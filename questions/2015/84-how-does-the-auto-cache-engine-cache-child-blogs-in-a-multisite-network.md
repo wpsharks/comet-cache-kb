@@ -15,4 +15,4 @@ If you've left the default configuration (i.e., `/sitemap.xml`), the Auto-Cache 
 
 If you have changed the name/path of the Sitemap file in the Auto-Cache Engine configuration, the Auto-Cache Engine will use that file/path for each of child blogs instead. 
 
-That means if you've changed the name/path to, for example, `/sitemaps/map.xml`, the Auto-Cache Engine will check `/sitemaps/map.xml` for the main site (e.g., `http://example.com/sitemaps/map.xml`) and then it will check `/sitemaps/map.xml` for each of the child blogs (e.g., `http://example.com/child1/sitemaps/map.xml`, `http://example.com/child1/sitemaps/map.xml`, etc.).
+That means if you've changed the name/path to, for example, `/sitemaps/map.xml`, the Auto-Cache Engine will check `/sitemaps/map.xml` for the main site (e.g., `http://example.com/sitemaps/map.xml`) and then it will check `/sitemaps/map.xml` for each of the child blogs (e.g., `http://example.com/child1/sitemaps/map.xml`, `http://example.com/child2/sitemaps/map.xml`, etc.).
