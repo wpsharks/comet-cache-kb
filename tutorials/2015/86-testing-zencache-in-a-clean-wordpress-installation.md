@@ -1,7 +1,7 @@
 ---
 title: Testing ZenCache in a Clean WordPress Installation
 categories: tutorials
-tags: troubleshooting, zencache
+tags: troubleshooting
 author: patdumond
 github-issue: https://github.com/websharks/zencache-kb/issues/86
 ---
