@@ -1,7 +1,7 @@
 ---
 title: Does the Auto-Cache Engine run for logged-in users?
 categories: questions
-tags: auto-cache-engine
+tags: auto-cache-engine, logged-in-users
 author: raamdev
 github-issue:
 github-issue: https://github.com/websharks/zencache-kb/issues/90
