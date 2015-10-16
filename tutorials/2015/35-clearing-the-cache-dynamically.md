@@ -10,7 +10,7 @@ ZenCache automatically handles updating the cache in many scenarios, such as whe
 
 The following examples use the [WordPress API hooks and filters](http://codex.wordpress.org/Plugin_API) system to call a custom function that will interface with ZenCache to clear the cache when a specific event occurs. 
 
-Using the technique described here, you can call any class method that is declared as a public function in `zencache.inc.php` or `zencache-pro.inc.php` using `$GLOBALS['zencache']->any_public_method()`.
+Using the technique described here, you can call any class method that is declared as a public function in `zencache.inc.php` (ZenCache Lite) or `src/includes/classes/ApiBase.php` (ZenCache Pro) using `$GLOBALS['zencache']->any_public_method()`.
 
 ### How to use the code examples
 
@@ -18,9 +18,13 @@ While you can add this code to your theme's `functions.php` file or use a [Funct
 
 What follows are a few examples of how you can clear the cache dynamically.
 
-## Clear entire cache when saving any post
+## Examples using WordPress Hooks/Filters API
 
-If you want to clear the cache every time a post is saved or updated (i.e., when the `save_post` action is fired), you can use the following:
+### Clear entire cache when saving any post
+
+If you want to clear the cache every time a post is saved or updated (i.e., when the `save_post` action is fired), you can use the following.
+
+#### ZenCache Lite
 
 ```php
 add_action( 'save_post', 'my_custom_clear_cache', 10, 1 );
@@ -30,9 +34,21 @@ function my_custom_clear_cache( ) {
 }
 ```
 
-## Clear page cache when Custom Post Type is saved
+#### ZenCache Pro
 
-Using the `save_post_{$post_type}` hook, which is fired whenever that custom post type is created or updated (see [docs](http://codex.wordpress.org/Plugin_API/Action_Reference/save_post)), you can use something like the following to clear the cache for a given page whenever a post with that custom post type is saved:
+```php
+add_action( 'save_post', 'my_custom_clear_cache', 10, 1 );
+
+function my_custom_clear_cache( ) {
+    $GLOBALS['zencache']->clearCache();
+}
+```
+
+### Clear page cache when Custom Post Type is saved
+
+Using the `save_post_{$post_type}` hook, which is fired whenever that custom post type is created or updated (see [docs](http://codex.wordpress.org/Plugin_API/Action_Reference/save_post)), you can use something like the following to clear the cache for a given page whenever a post with that custom post type is saved.
+
+#### ZenCache Lite
 
 ```php
 add_action( 'save_post_my-custom-post-type', 'clear_cache_for_page_id_5', 10, 1 );
@@ -41,12 +57,25 @@ function clear_cache_for_page_id_5( ) {
 	$GLOBALS['zencache']->auto_clear_post_cache(5);
 }
 ```
+You'll want to change `5` to the ID of the Page/Post whose cache you'd like to clear when that custom post type is saved, and you'll want to change `my-custom-post-type` to the actual name of your Custom Post Type.
+
+#### ZenCache Pro
+
+```php
+add_action( 'save_post_my-custom-post-type', 'clear_cache_for_page_id_5', 10, 1 );
+
+function clear_cache_for_page_id_5( ) {
+	$GLOBALS['zencache']->autoClearPostCache(5);
+}
+```
 
 You'll want to change `5` to the ID of the Page/Post whose cache you'd like to clear when that custom post type is saved, and you'll want to change `my-custom-post-type` to the actual name of your Custom Post Type.
 
-## Clear a specific page cache when saving any post
+### Clear a specific page cache when saving any post
 
-Using the `save_post` hook, which is fired whenever a post created or updated (see [docs](http://codex.wordpress.org/Plugin_API/Action_Reference/save_post)), you can use something like the following to clear the cache for a given page:
+Using the `save_post` hook, which is fired whenever a post created or updated (see [docs](http://codex.wordpress.org/Plugin_API/Action_Reference/save_post)), you can use something like the following to clear the cache for a given page.
+
+#### ZenCache Lite
 
 ```php
 add_action( 'save_post', 'clear_cache_for_page_id_5', 10, 1 );
@@ -58,9 +87,23 @@ function clear_cache_for_page_id_5( ) {
 
 You'll want to change `5` to the ID of the Page/Post whose cache you'd like to clear.
 
-## Clear the cache for a Logged-In User (when caching for Logged-In Users is enabled)
+#### ZenCache Pro 
 
-To clear the cache for a specific user by passing the User ID, you can use the following to, for example, clear the cache for the user with User ID `25`:
+```php
+add_action( 'save_post', 'clear_cache_for_page_id_5', 10, 1 );
+
+function clear_cache_for_page_id_5( ) {
+	$GLOBALS['zencache']->autoClearPostCache(5);
+}
+```
+
+You'll want to change `5` to the ID of the Page/Post whose cache you'd like to clear.
+
+### Clear the cache for a Logged-In User (when caching for Logged-In Users is enabled)
+
+To clear the cache for a specific user by passing the User ID, you can use the following. The examples below clear the cache for the user with User ID `25`.
+
+#### ZenCache Lite
 
 ```php
 add_action( 'init', 'clear_user_cache_for_id_25', 10, 1 );
@@ -72,12 +115,38 @@ function clear_user_cache_for_id_25( ) {
 
 You'll want to change `25` to the User ID whose cache you'd like to clear.
 
-If you just want to clear the cache for the currently logged in user, you can use the following code instead (this uses `get_current_user_id()` to detect the User ID of the current user):
+#### ZenCache Pro
+
+```php
+add_action( 'init', 'clear_user_cache_for_id_25', 10, 1 );
+
+function clear_user_cache_for_id_25( ) {
+	$GLOBALS['zencache']->autoClearUserCache(25);
+}
+```
+
+You'll want to change `25` to the User ID whose cache you'd like to clear.
+
+### Clear the cache for the currently Logged-In User (when caching for Logged-In Users is enabled)
+
+If you just want to clear the cache for the currently logged in user, you can use the following code (this uses `get_current_user_id()` to detect the User ID of the current user).
+
+#### ZenCache Lite
 
 ```php
 add_action( 'init', 'clear_current_user_cache', 10, 1 );
 
 function clear_current_user_cache( ) {
 	$GLOBALS['zencache']->auto_clear_user_cache_cur();
+}
+```
+
+#### ZenCache Pro
+
+```php
+add_action( 'init', 'clear_current_user_cache', 10, 1 );
+
+function clear_current_user_cache( ) {
+	$GLOBALS['zencache']->autoClearUserCacheCur();
 }
 ```
