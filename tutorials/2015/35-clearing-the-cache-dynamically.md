@@ -150,3 +150,41 @@ function clear_current_user_cache( ) {
 	$GLOBALS['zencache']->autoClearUserCacheCur();
 }
 ```
+
+## Using the ZenCache API Class
+
+If you need to call the ZenCache API from another PHP file, you'll probably want to use the ZenCache API Class. This will require first loading the WordPress framework (via `wp-load.php`).
+
+### ZenCache Lite
+
+```php
+<?php
+// Load WordPress framework
+require_once dirname(__FILE__).'/wp-load.php';
+
+// Any of these API calls can now be made from this PHP file
+zencache::version();
+zencache::options();
+zencache::clear();
+zencache::wipe();
+zencache::purge();
+```
+
+### ZenCache Pro
+
+```php
+<?php
+// Load WordPress framework
+require_once dirname(__FILE__).'/wp-load.php';
+
+// Any of these API calls can now be made from this PHP file
+zencache::version();
+zencache::options();
+zencache::clear();
+zencache::wipe();
+zencache::purge();
+zencache::clearPost($post_id);
+zencache::clearUser($user_id);
+zencache::clearCurrentUser();
+zencache::clearUrl($url);
+```
