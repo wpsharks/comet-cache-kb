@@ -7,11 +7,13 @@ toc-enable: off
 github-issue: https://github.com/websharks/zencache-kb/issues/96
 ---
 
-The Clear Cache menu options in the WordPress Admin Bar (see **WordPress Dashboard → ZenCache → Plugin Options → Manual Cache Clearing**), will change depending on which features are enabled and depending on your current context.
+The Clear Cache menu options in the WordPress Admin Bar, will change depending on which ZenCache and server features are enabled. It will also change depending on your current context within WordPress itself.
+
+**Note:** If you don't currently see these menu options, you can enable them in **WordPress Dashboard → ZenCache → Plugin Options → Manual Cache Clearing**.
 
 ![2015-10-31_21-01-56](https://cloud.githubusercontent.com/assets/53005/10867073/9e46ca8c-8025-11e5-8383-4872f5555adf.png)
 
-There are three menu options that are dynamic in this way:
+There are three menu options that are dynamic:
 
 **Current URL**: The "Current URL" option only shows on the front-end of the site. You won't see this while working in the Dashboard; i.e., in `/wp-admin/*` areas. Since ZenCache does not cache WordPress Dashboard pages, it doesn't make sense to show a "Current URL" option when you are on the WordPress Dashboard.
 
