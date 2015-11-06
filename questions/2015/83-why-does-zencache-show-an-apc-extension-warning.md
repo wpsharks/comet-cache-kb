@@ -7,9 +7,9 @@ github-issue:
 github-issue: https://github.com/websharks/zencache-kb/issues/83
 ---
 
-The PHP APC extension is an outdated and buggy extension (the last update to the APC extension was 2012) and the PHP community has since abandoned development of the APC extension in favor of the newer [Opcache extension](http://php.net/manual/en/book.opcache.php). We discovered several major issues with the APC extension that were resulting in fatal errors on some of our customers' sites. Many web hosts still run this old software so to avoid the possibility of ZenCache triggering this bug in APC, we are now showing a warning message to site owners who try to activate ZenCache on a site that has the old APC extension enabled.
+The PHP APC extension is an outdated and buggy extension (the last update to the APC extension was 2012) and the PHP community has since abandoned development of the APC extension in favor of the newer [OPcache extension](http://php.net/manual/en/book.opcache.php). We discovered several major issues with the APC extension that were resulting in fatal errors on some of our customers' sites. Many web hosts still run this old software so to avoid the possibility of ZenCache triggering this bug in APC, we are now showing a warning message to site owners who try to activate ZenCache on a site that has the old APC extension enabled.
 
-**Note:** Any WordPress plugin that uses [Closures](http://php.net/manual/en/functions.anonymous.php) (a PHP feature used to improve code performance and managability) in its codebase is at risk of triggering the fatal APC bug, so updating to the newer Opcache extension is highly recommended. If you're not familiar with how to do this, you can contact your web hosting company and ask them to upgrade your server to PHP 5.5+.
+**Note:** Any WordPress plugin that uses [Closures](http://php.net/manual/en/functions.anonymous.php) (a PHP feature used to improve code performance and managability) in its codebase is at risk of triggering the fatal APC bug, so updating to the newer OPcache extension is highly recommended. If you're not familiar with how to do this, you can contact your web hosting company and ask them to upgrade your server to PHP 5.5+.
 
 ## Discovering the APC Compatibility Issues
 
@@ -17,7 +17,7 @@ Shortly after releasing ZenCache v150626 in June 2015, we began receiving sporad
 
 After extensive research, we discovered that the issue was related to a bug in PHP's APC extension: [PHP Bug #52144](https://bugs.php.net/bug.php?id=52144).
 
-Despite being outdated and buggy, the PHP APC extension is still commonly enabled by default on web servers that are running older versions of PHP, namely PHP v5.3 and PHP v5.4. (The [Opcache extension](http://php.net/manual/en/book.opcache.php) that replaces the APC extension is enabled by default in PHP v5.5+, so if you're running PHP v5.5+ it's likely that you don't have APC installed at all.)
+Despite being outdated and buggy, the PHP APC extension is still commonly enabled by default on web servers that are running older versions of PHP, namely PHP v5.3 and PHP v5.4. (The [OPcache extension](http://php.net/manual/en/book.opcache.php) that replaces the APC extension is enabled by default in PHP v5.5+, so if you're running PHP v5.5+ it's likely that you don't have APC installed at all.)
 
 We discovered that the APC extension is more likely to trigger a fatal error when PHP is running code that utilizes a lot of Closures, a newer feature of PHP (but one that is officially included with PHP v5.3 and PHP v5.4). Part of the work that went into ZenCache v150626 was a restructured codebase that more heavily utilizied Closures to improve code performance and manageability. As a result, the restructured codebase increased the likelihood of exposing that existing PHP bug. On some systems, just running more than one WordPress plugin that used Closures in its code increased the likelihood of a fatal error.
 
@@ -31,7 +31,7 @@ APC is an acronym for _Alternative PHP Cache_. It was designed as a free and ope
 
 Disabling the APC extension will have no adverse effects on your site. In fact, since the APC extension is so buggy, you will likely be _improving_ your server by disabling the APC extension!
 
-If you want to use an opcode cache, we recommend using the [Opcache extension](http://php.net/manual/en/book.opcache.php). The APC extension has been replaced by the newer Opcache, which is far more stable and still under active development.
+If you want to use an opcode cache, we recommend using the [OPcache extension](http://php.net/manual/en/book.opcache.php). The APC extension has been replaced by the newer OPcache, which is far more stable and still under active development.
 
 ## How can I disable the APC Extension?
 
@@ -41,7 +41,7 @@ Depending on what your web hosting company allows you to do, you may be able to 
 ini_set('apc.cache_by_default', false);
 ```
 
-If that does not work and you still receive the APC Extension Warning, you'll need to contact your web hosting company and ask them to either disable the PHP APC extension or upgrade your server to PHP 5.5+, which uses the newer and more stable Opcache extension.
+If that does not work and you still receive the APC Extension Warning, you'll need to contact your web hosting company and ask them to either disable the PHP APC extension or upgrade your server to PHP 5.5+, which uses the newer and more stable OPcache extension.
 
 ## Can I run APC, but tell it to exclude ZenCache?
 
