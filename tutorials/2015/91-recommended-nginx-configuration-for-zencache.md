@@ -7,6 +7,11 @@ github-issue:
 github-issue: https://github.com/websharks/zencache-kb/issues/91
 ---
 
+The following Nginx configuration recommendations are to be used _in addition to_ an existing Nginx configuration. If you need help getting WordPress working with an Nginx server, please consult the [WordPress Nginx](https://codex.wordpress.org/Nginx) page. The following contains configuration relevant to improving speed on your site and for the best compatibility with ZenCache.
+
+See the comments inside the configuration below for further details about each section.
+
+
 ```nginx
 server {
 
