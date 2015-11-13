@@ -11,9 +11,7 @@ If you are running the [Nginx Web Server](http://nginx.org), ZenCache will show 
 
 ![2015-10-15_12-41-56](https://cloud.githubusercontent.com/assets/53005/10520790/372dcd70-733a-11e5-979f-f0027b1322cd.png)
 
-If you've already updated your server with the [recommended Nginx configuration](http://zencache.com/r/kb-article-recommended-nginx-server-configuration/), then you're all set and you can safely ignore the notice. 
-
-If you want to get rid of the notice completely, you can create a small [MU-Plugin](http://codex.wordpress.org/Must_Use_Plugins) to disable the message.
+If you've already updated your server with the [recommended Nginx configuration](http://zencache.com/r/kb-article-recommended-nginx-server-configuration/), then you're all set and you can safely ignore the notice. If you want to get rid of the notice completely, you can create a small [MU-Plugin](http://codex.wordpress.org/Must_Use_Plugins) to disable the message.
 
 Create this file and directory: `wp-content/mu-plugins/zc-disable-nginx-htaccess-notice.php`:
 
