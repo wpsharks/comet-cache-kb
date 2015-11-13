@@ -110,7 +110,7 @@ _Excludes: `/member/`, `/members/`, `/member-groups/`, `/member-info/`, and `/me
 
 See: **Dashboard → ZenCache → Plugin Options → Automatic Cache Clearing → Sitemap-Related Options → XML Sitemap Patterns**.
 
-If you want to clear URLs for a mapped domain, the URLs that you list should include the mapped domain. To cover all domains if you need to:
+If you want to clear URLs for a mapped domain, the URLs that you list should include the mapped domain. If you need to cover all domains, you can use a pattern like this:
 
 ```text
 http://*/path/to/something/
@@ -120,19 +120,24 @@ http://*/path/to/something/
 
 -------
 
-### Clear Cache "Specific URL" Examples
+### Clear Cache Options Menu: "Specific URL" Examples
 
-See: **ZenCache → Plugin Options → Manual Cache Clearing**.
+![Clear Cache Options: Specific URL](https://cloud.githubusercontent.com/assets/53005/11138107/295dcd5e-898c-11e5-9e08-b92899f1edc4.png)
 
-To clear the cache for a specific URL, you can define a pattern which can be simple, i.e. single URL, or complex which includes the use of wildcard characters.
+**Note:** If you don't see the Clear Cache Options menu in your Admin Bar, see **ZenCache → Plugin Options → Manual Cache Clearing**.
 
-If you want to clear the cache for your `/my-account` page, regardless of which protocol is used to access the page (e.g., `http://` or `https://`, and regardless of using www or non-www, then you can add `**` at the beginning of the URL:
+To clear the cache for a specific URL, you can define a pattern which can be simple, e.g., any single URL on your site, or a complex pattern which includes the use of wildcard characters.
+
+If you want to clear the cache for your `/my-account` page, regardless of which protocol is used to access the page (e.g., `http://` or `https://`, and regardless of whether or not the URL was accesed using the www or non-www version of the domain, then you can add `**` at the beginning of the URL to create a pattern like this:
 
 ```text
 **domain.com/my-account
 ```
 
-This pattern will match all of these URLs:
+![Clear Cache Options: Entering a Specific URL Pattern](https://cloud.githubusercontent.com/assets/53005/11138188/2e232572-898d-11e5-9dde-ec23b340770a.png)
+
+
+This pattern will match all of these URLs and clear any cache files associated with those URLs:
 
 ```text
 https://www.domain.com/my-account
@@ -140,7 +145,7 @@ https://domain.com/my-account
 http://www.domain.com/my-account
 ```
 
-If you also wanted to match anything that might come after `my-account` (e.g., `my-account/`, `my-account/upgrade/`, etc.), you could simply add another `**` so that the pattern becomes:
+If you also wanted to match anything that might come _after_ `my-account` (e.g., `my-account/`, `my-account/upgrade/`, etc.), you could simply add another `**` so that the pattern becomes:
 
 ```text
 **domain.com/my-account**
