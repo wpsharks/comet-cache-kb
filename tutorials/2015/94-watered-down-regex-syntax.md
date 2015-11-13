@@ -106,17 +106,29 @@ _Excludes: `/member/`, `/members/`, `/member-groups/`, `/member-info/`, and `/me
 
 -------
 
-### Sitemap URI Examples
+### Auto-Clear XML Sitemap Pattern Examples
 
 See: **Dashboard → ZenCache → Plugin Options → Automatic Cache Clearing → Sitemap-Related Options → XML Sitemap Patterns**.
 
-If you want to clear URLs for a mapped domain, the URLs that you list should include the mapped domain. If you need to cover all domains, you can use a pattern like this:
+Searches are performed against the `REQUEST_URI`; e.g., a request for `/sitemap.xml` and/or `/sitemap-xyz.xml` are both matched by the pattern: `/sitemap**.xml`. Full URLs _should not_ be used; only the URI (everything that comes after the domain). One pattern per line.
+
+If you want to auto-clear `/sitemap.xml`, `/sitemap-1.xml`, and `/sitemap-2.xml`, you could use a pattern like this:
 
 ```text
-http://*/path/to/something/
+/sitemap*.xml
 ```
 
-**NOTE:** The scheme (i.e., `http://` or `https://` is ignored), and both schemes are cleared automatically.
+If you want to auto-clear `/sitemap.xml`, `/sitemap/pages/1.xml`, and `/sitemap/posts/1.xml`, you could use a pattern like this: `/sitemap**.xml`.
+
+```text
+/sitemap**.xml
+```
+
+**A note regarding WP Multisite**: Any domains mapped to the current site are cleared automatically. In other words, if you enter `/sitemap**.xml` (the default value for that field) then whenever the cache is cleared for Child Site A, the following are cleared automatically:
+
+- `http://child-a.example.com/sitemap.xml`
+- or: `http://example.com[/base]/child-a/sitemap.xml`
+- and/or: `http://[MAPPED DOMAIN]/sitemap.xml` (for each domain mapped to child site A)
 
 -------
 
