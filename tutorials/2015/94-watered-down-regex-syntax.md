@@ -17,6 +17,8 @@ The syntax is parsed as plain text (i.e., what you type is what you get), but th
 - `^` = beginning of the string 
 - `$` = end of the string
 
+The following sections provide specific examples for each place within ZenCache that the syntax can be used.
+
 ---
 
 ## Where is Watered-Down Regex supported in ZenCache?
@@ -110,7 +112,7 @@ See: **Dashboard → ZenCache → Plugin Options → Automatic Cache Clearing �
 
 If you want to clear URLs for a mapped domain, the URLs that you list should include the mapped domain. To cover all domains if you need to:
 
-```
+```text
 http://*/path/to/something/
 ```
 
@@ -124,23 +126,31 @@ See: **ZenCache → Plugin Options → Manual Cache Clearing**.
 
 To clear the cache for a specific URL, you can define a pattern which can be simple, i.e. single URL, or complex which includes the use of wildcard characters.
 
-If you want to clear the cache for your `/my-account` page,  add `**` at the beginning of the URL:
+If you want to clear the cache for your `/my-account` page, regardless of which protocol is used to access the page (e.g., `http://` or `https://`, and regardless of using www or non-www, then you can add `**` at the beginning of the URL:
 
+```text
+**domain.com/my-account
 ```
-**domain.com/my-account*
+
+This pattern will match all of these URLs:
+
+```text
+https://www.domain.com/my-account
+https://domain.com/my-account
+http://www.domain.com/my-account
 ```
 
-This will match all of the bold items in the URLs below.
+If you also wanted to match anything that might come after `my-account` (e.g., `my-account/`, `my-account/upgrade/`, etc.), you could simply add another `**` so that the pattern becomes:
 
-**https://www**.domain.com/my-account
-**https://**domain.com/my-account
-**http://www.**domain.com/my-account
+```text
+**domain.com/my-account**
+```
 
 -------
 
 To clear the cache for any specific URI that contains `/membership/` or `/memberships/` or `/membership[SOMETHING]/` in it
 
-```
+```text
 http://www.domain.com/membership*/
 ```
 
@@ -149,12 +159,14 @@ http://www.domain.com/membership*/
 To clear the cache for `/membership/` and any pages or posts beneath it, one level deep, add `*` at the end of the URL:
 
 
-``` 
+``` text
 http://www.domain.com/membership/*
 ```
 
 This will clear cache for the following URLs:
 
-**http://www.domain.com/membership/pageA/**
-**http://www.domain.com/membership/postB/**
-**http://www.domain.com/membership/group/**
+```text
+http://www.domain.com/membership/pageA/
+http://www.domain.com/membership/postB/
+http://www.domain.com/membership/group/
+```
