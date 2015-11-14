@@ -3,8 +3,8 @@ title: What are Cross-Origin Request Blocked Errors?
 categories: questions
 tags: static-cdn-filters
 author: raamdev
-github-issue:
 github-issue: https://github.com/websharks/zencache-kb/issues/92
+toc-enable: off
 ---
 
 Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the resource originated. If you are using ZenCache Static CDN Filters and some of your website fonts are not loading, this may be the result of a Cross-origin Request Blocked error like the following:
