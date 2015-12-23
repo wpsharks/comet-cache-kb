@@ -40,6 +40,10 @@ Upon creation, your CDN provides you with a host name for this Distribution (e.g
 
 _Note: if your CDN provides you with an option to enable "Query String Forwarding" or "Interpretation of Query Strings", please **do** enable this. Enabling this feature allows ZenCache Pro to handle cache invalidations for you automatically._
 
+#### What about Amazon S3?
+
+Amazon S3 is a file storage service, designed to serve file downloads. It is not designed as a Content Distribution Network (CDN). However, Amazon does have a CDN service and that's called **CloudFront** (which is actually built on top of Amazon S3). The ZenCache Static CDN Filters _do_ integrate with Amazon CloudFront (see [How do I setup Static CDN Filters w/ Amazon CloudFront?](http://zencache.com/kb-article/how-do-i-setup-static-cdn-filters-w-amazon-cloudfront/)).
+
 ### Which Files are Served by the CDN?
 
 All static files on your site; everything. Of course, you have a lot of control over this too. ZenCache Pro exposes several configuration options that allow you to whitelist/blacklist certain file extensions and/or certain URIs.
