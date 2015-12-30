@@ -3,13 +3,12 @@ title: Why am I seeing Auto-Cache Engine timeout errors?
 categories: questions
 tags: auto-cache-engine, mu-plugins-hacks, error-messages
 author: raamdev
-github-issue:
 github-issue: https://github.com/websharks/zencache-kb/issues/101
 ---
 
 The Auto-Cache Engine uses the WordPress HTTP API to make requests for verifying your XML Sitemap and auto-caching the pages defined in your sitemap. Timeout errors occur when a request does not complete within the allotted timeout period. The default timeout period for HTTP requests in WordPress is `5` seconds (`5000` milliseconds). Timeout errors are not uncommon and there are many reasons you might see a timeout error, however the most common causes are network congestion and high server load. Timeout errors usually resolve themselves on the next request attempt, however if you are frequently seeing timeout errors that could indicate an issue with your server.
 
-### XML Sitemap Timeout Errors
+## XML Sitemap Timeout Errors
 
 If you are using the Auto-Cache Engine and you receive a timeout error on the Dashboard, it probably looks something like this:
 
@@ -21,9 +20,9 @@ When the Auto-Cache Engine is enabled, ZenCache will verify that it can reach yo
 
 If you _constantly_ see the XML Sitemap timeout error and you are certain that the Sitemap URL is reachable, then you can try increasing the WordPress timeout as described below.
 
-### Auto-Cache Timeout Errors
+## Auto-Cache Timeout Errors
 
-If you are seeing timeout errors in your `/cache/zencache/cache/zc-auto-cache.log`, they probably look like this:
+If you are seeing timeout errors in your `/cache/zencache/cache/zc-auto-cache.log` file, they probably look like this:
 
 ```
 Time: Mon, 01 Sep 14 22:25:50 +0000
@@ -37,7 +36,7 @@ If you are seeing many timeout errors in your log file, that could mean that you
 
 If adjusting the Auto-Cache Delay Timer does not resolve the issue, you can try adjusting the default WordPress Request Timeout as described below.
 
-### Adjusting the WordPress Request Timeout
+## Adjusting the WordPress Request Timeout
 
 If your server is often under a heavy load and triggers timeout errors frequently, you can tell WordPress to increase the timeout period slightly using an [MU-Plugin](http://codex.wordpress.org/Must_Use_Plugins). This will change the default timeout value for all WordPress HTTP requests. You can try adjusting this value slightly to see if adding a few seconds fixes the problem entirely.
 
