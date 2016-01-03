@@ -22,6 +22,8 @@ However, if you choose to enable nonce caching globally, then a visitor to your 
 
 ### Logged-In Users (safer)
 
+_Note: Logged-In User caching is disabled by default in ZenCache. If you leave Logged-In User caching is disabled, the snippet below will have no effect._
+
 If you're using Logged-In User caching and you want to allow nonce values to be cached for Logged-In Users, you can do so by adding the following somewhere near the top of your `wp-config.php` file (after the `<?php` line):
 
 ```php
