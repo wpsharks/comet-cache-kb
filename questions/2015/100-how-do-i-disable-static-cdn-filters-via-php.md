@@ -25,7 +25,6 @@ Version: 1.0
 Author URI: http://www.websharks-inc.com
 */
 
-<?php
 add_filter('zencache_options', function($options) {
     if(is_page('my-page')) {
         $options['cdn_enable'] = '0';
