@@ -3,27 +3,27 @@ title: Watered-Down Regex Syntax
 categories: tutorials
 tags: uri-exclusion-patterns,http-referrer-exclusion-patterns,user-agent-exclusion-patterns,html-compression
 author: kristineds
-github-issue: https://github.com/websharks/zencache-kb/issues/94
+github-issue: https://github.com/websharks/comet-cache-kb/issues/94
 ---
 
-True Regular Expressions (i.e., the full syntax) can be very handy for a variety of reasons. However, it is also quite complex. More complex than what most ZenCache users need. So for that reason, ZenCache supports a custom, watered-down version of regex. It can be used in exclusion patterns, custom URLs, and more. This provides a good balance between flexibility and simplicity.
+True Regular Expressions (i.e., the full syntax) can be very handy for a variety of reasons. However, it is also quite complex. More complex than what most Comet Cache users need. So for that reason, Comet Cache supports a custom, watered-down version of regex. It can be used in exclusion patterns, custom URLs, and more. This provides a good balance between flexibility and simplicity.
 
 ## Watered-Down Regex Syntax
 
-The syntax is parsed as plain text (i.e., what you type is what you get), but the following characters are special. These characters were taken from the original/official Regex syntax, and then modified slightly to behave in the following ways that are useful in ZenCache:
+The syntax is parsed as plain text (i.e., what you type is what you get), but the following characters are special. These characters were taken from the original/official Regex syntax, and then modified slightly to behave in the following ways that are useful in Comet Cache:
 
 - `*` = 0 or more characters that are NOT a slash `/`
 - `**` = 0 or more characters of any kind, including `/` slashes
 - `^` = beginning of the string 
 - `$` = end of the string
 
-The following sections provide specific examples for each place within ZenCache that the syntax can be used.
+The following sections provide specific examples for each place within Comet Cache that the syntax can be used.
 
 ---
 
-## Where is Watered-Down Regex supported in ZenCache?
+## Where is Watered-Down Regex supported in Comet Cache?
 
-Within ZenCache, there are many areas that support watered-down regex syntax:
+Within Comet Cache, there are many areas that support watered-down regex syntax:
 
 - Custom URLs
 - URI Exclusion
@@ -35,7 +35,7 @@ Within ZenCache, there are many areas that support watered-down regex syntax:
 ## Watered-Down Regex Examples
 
 ### Custom URL Examples
-See: **Dashboard → ZenCache → Plugin Options → Automatic Cache Clearing → Misc. Auto-Clear Options → Custom URLs**.
+See: **Dashboard → Comet Cache → Plugin Options → Automatic Cache Clearing → Misc. Auto-Clear Options → Custom URLs**.
 
 To clear all cache files for URIs under `/blog/` (i.e., all Posts):
 
@@ -49,7 +49,7 @@ In this example, adding the syntax `**` will exclude all custom URIs that start 
 
 ### URI/Referer/User-Agent Exclusion Examples
 
-See: **Dashboard → ZenCache → Plugin Options → URI Exclusion Patterns/HTTP Referrer Exclusion Patterns/User-Agent Exclusion Patterns**.
+See: **Dashboard → Comet Cache → Plugin Options → URI Exclusion Patterns/HTTP Referrer Exclusion Patterns/User-Agent Exclusion Patterns**.
 
 For instance, if I want to exclude only the home page URI:
 
@@ -108,7 +108,7 @@ _Excludes: `/member/`, `/members/`, `/member-groups/`, `/member-info/`, and `/me
 
 ### Auto-Clear XML Sitemap Pattern Examples
 
-See: **Dashboard → ZenCache → Plugin Options → Automatic Cache Clearing → Sitemap-Related Options → XML Sitemap Patterns**.
+See: **Dashboard → Comet Cache → Plugin Options → Automatic Cache Clearing → Sitemap-Related Options → XML Sitemap Patterns**.
 
 Searches are performed against the `REQUEST_URI`; e.g., a request for `/sitemap.xml` and/or `/sitemap-xyz.xml` are both matched by the pattern: `/sitemap**.xml`. Full URLs _should not_ be used; only the URI (everything that comes after the domain). One pattern per line.
 
@@ -136,7 +136,7 @@ If you want to auto-clear `/sitemap.xml`, `/sitemap/pages/1.xml`, and `/sitemap/
 
 ![Clear Cache Options: Specific URL](https://cloud.githubusercontent.com/assets/53005/11138107/295dcd5e-898c-11e5-9e08-b92899f1edc4.png)
 
-**Note:** If you don't see the Clear Cache Options menu in your Admin Bar, see **ZenCache → Plugin Options → Manual Cache Clearing**.
+**Note:** If you don't see the Clear Cache Options menu in your Admin Bar, see **Comet Cache → Plugin Options → Manual Cache Clearing**.
 
 To clear the cache for a specific URL, you can define a pattern which can be simple, e.g., any single URL on your site, or a complex pattern which includes the use of wildcard characters.
 

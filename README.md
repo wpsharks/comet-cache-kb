@@ -1,4 +1,4 @@
-zencache-kb
+comet-cache-kb
 ===========
 
-The ZenCache™ Knowledge Base
+The Comet Cache™ Knowledge Base

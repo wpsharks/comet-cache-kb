@@ -1,15 +1,15 @@
 ---
-title: What information does ZenCache Pro report to WebSharks?
+title: What information does Comet Cache Pro report to WebSharks?
 categories: questions
 tags: plugin-updater
 author: raamdev
 github-issue:
-github-issue: https://github.com/websharks/zencache-kb/issues/82
+github-issue: https://github.com/websharks/comet-cache-kb/issues/82
 ---
 
-ZenCache Pro collects and reports basic environment information to WebSharks to help plan for and improve future versions of ZenCache. All of the information collected by WebSharks is stored anonymously with no identifying information. This is not unlike WordPress itself, which reports a lot of information to WordPress about your site. However, ZenCache does this on a much smaller scale and, unlike WordPress, does not collect any identifying information that would link that data back to your site.
+Comet Cache Pro collects and reports basic environment information to WebSharks to help plan for and improve future versions of Comet Cache. All of the information collected by WebSharks is stored anonymously with no identifying information. This is not unlike WordPress itself, which reports a lot of information to WordPress about your site. However, Comet Cache does this on a much smaller scale and, unlike WordPress, does not collect any identifying information that would link that data back to your site.
 
-The following information is what ZenCache Pro collects and reports to WebSharks:
+The following information is what Comet Cache Pro collects and reports to WebSharks:
 
 - MD5 Hash of the server IP address (e.g., `2909a2c64757ce93daa60e3cfc653ef1`; note: we do not store any IP addresses; all reported data is stored anonymously; we use this hash to filter out duplicate reports from the same server)
 - Server OS (e.g., `Linux`)
@@ -17,7 +17,7 @@ The following information is what ZenCache Pro collects and reports to WebSharks
 - MySQL Version (e.g., `5.5`)
 - WordPress Version (e.g., `4.2.2`)
 - Product Version (e.g., `150709`)
-- Product Name (e.g., `ZenCache Pro`)
+- Product Name (e.g., `Comet Cache Pro`)
 
 ## Why is WebSharks collecting this information?
 
@@ -29,12 +29,12 @@ To disable the anonymous stats collection, create an [MU-Plugin](http://codex.wo
 
 ```php
 <?php
-add_filter('zencache_statsLogPinger_enable', '__return_false');
+add_filter('comet_cache_statsLogPinger_enable', '__return_false');
 ```
 
 ## Can I inspect the code used to collect and report this information?
 
-Yes, absolutely. All of the ZenCache Pro code is open-source and available for inspection. You'll find the relevant code in `src/includes/closures/Plugin/StatsUtils.php`.
+Yes, absolutely. All of the Comet Cache Pro code is open-source and available for inspection. You'll find the relevant code in `src/includes/closures/Plugin/StatsUtils.php`.
 
 ## Where are you storing this information?
 
@@ -57,6 +57,6 @@ CREATE TABLE IF NOT EXISTS `wp_product_stats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 ```
 
-## Does ZenCache Lite collect stats?
+## Does Comet Cache Lite collect stats?
 
-No. The lite version (i.e., the version of ZenCache available at WordPress.org) does not collect statistics like this. Stats are collected when using ZenCache Pro only.
+No. The lite version (i.e., the version of Comet Cache available at WordPress.org) does not collect statistics like this. Stats are collected when using Comet Cache Pro only.

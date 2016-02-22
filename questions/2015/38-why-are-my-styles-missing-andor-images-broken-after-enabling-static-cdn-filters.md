@@ -3,7 +3,7 @@ title: Why are my styles missing and/or images broken after enabling Static CDN 
 categories: questions
 tags: static-cdn-filters
 author: raamdev
-github-issue: https://github.com/websharks/zencache-kb/issues/38
+github-issue: https://github.com/websharks/comet-cache-kb/issues/38
 toc-enable: off
 ---
 
@@ -25,4 +25,4 @@ If you visited your site while the CDN was still setting up the Distribution, yo
 
 Try clearing your browser's cache and restarting the browser. Then visit your site and refresh the page.
 
-If the links are still broken, you can try starting over from scratch: Create a Distribution on your CDN, wait for it to finish being Deployed, and _then_ copy the CDN Hostname, paste it into the ZenCache Static CDN Filters configuration, and click "Save All Changes".
+If the links are still broken, you can try starting over from scratch: Create a Distribution on your CDN, wait for it to finish being Deployed, and _then_ copy the CDN Hostname, paste it into the Comet Cache Static CDN Filters configuration, and click "Save All Changes".

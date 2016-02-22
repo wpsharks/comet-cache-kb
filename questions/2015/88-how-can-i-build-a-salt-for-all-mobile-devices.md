@@ -3,7 +3,7 @@ title: How can I build a salt for all mobile devices?
 categories: questions
 tags: dynamic-version-salt
 author: jaswsinc
-github-issue: https://github.com/websharks/zencache-kb/issues/88
+github-issue: https://github.com/websharks/comet-cache-kb/issues/88
 ---
 
 If your site is "Adaptive" (i.e., serves an entirely different version of the site to mobile devices), you might need to split your cache into one or more partitions. This is accomplished by using a Version Salt.
@@ -51,7 +51,7 @@ function zc_is_mobile() {
 
 ### Step 2: Include `zc-is-mobile.php` in your `wp-config.php`
 
-Edit your `/wp-config.php` file and add this line somewhere before the call that includes `/wp-settings.php`. The point being, we want this function to be available for ZenCache to use in the early phase of the caching process.
+Edit your `/wp-config.php` file and add this line somewhere before the call that includes `/wp-settings.php`. The point being, we want this function to be available for Comet Cache to use in the early phase of the caching process.
 
 ```php
 require_once(ABSPATH . 'zc-is-mobile.php');
@@ -63,6 +63,6 @@ require_once(ABSPATH . 'zc-is-mobile.php');
 
 ### Step 3: Define Version Salt in Dashboard
 
-Here we tell ZenCache to use the `zc_is_mobile()` return value as the Version Salt. Thus, if it's a mobile device, the Version Salt becomes the word `mobile`. If it's not, the Version Salt is empty. This effectively splits the cache into two parts. Mobile and _not_ mobile.
+Here we tell Comet Cache to use the `zc_is_mobile()` return value as the Version Salt. Thus, if it's a mobile device, the Version Salt becomes the word `mobile`. If it's not, the Version Salt is empty. This effectively splits the cache into two parts. Mobile and _not_ mobile.
 
 ![2015-09-08_17-29-04](https://cloud.githubusercontent.com/assets/1563559/9751276/30fd8ef2-564f-11e5-9bdb-4507fbfabe5e.png)

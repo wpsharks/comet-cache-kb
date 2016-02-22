@@ -3,11 +3,11 @@ title: How do I customize IP address detection?
 categories: questions
 tags: themeplugin-developers
 author: raamdev
-github-issue: https://github.com/websharks/zencache-kb/issues/51
+github-issue: https://github.com/websharks/comet-cache-kb/issues/51
 toc-enable: off
 ---
 
-When detecting the remote IP address, ZenCache uses the following lookup order, where each source is an array key in the [`$_SERVER` superglobal](http://php.net/manual/en/reserved.variables.server.php). We use the first public IPv4 or IPv6 address found in these headers, starting from the top and working down.
+When detecting the remote IP address, Comet Cache uses the following lookup order, where each source is an array key in the [`$_SERVER` superglobal](http://php.net/manual/en/reserved.variables.server.php). We use the first public IPv4 or IPv6 address found in these headers, starting from the top and working down.
 
 ```text
 'HTTP_CF_CONNECTING_IP',
@@ -21,13 +21,13 @@ When detecting the remote IP address, ZenCache uses the following lookup order, 
 'REMOTE_ADDR',
 ```
 
-To modify the list of sources, you can create an [Advanced Cache Plugin](https://github.com/websharks/zencache-kb/issues/5); create this directory and file:
+To modify the list of sources, you can create an [Advanced Cache Plugin](https://github.com/websharks/comet-cache-kb/issues/5); create this directory and file:
 `/wp-content/ac-plugins/zc-ip-sources.php`
 
 ```php
 <?php
-$ac = $GLOBALS['zencache__advanced_cache'];
-$ac->add_filter('zencache\\share::current_ip_sources', function($sources)
+$ac = $GLOBALS['comet_cache__advanced_cache'];
+$ac->add_filter('comet_cache\\share::current_ip_sources', function($sources)
 {
     // A source is an array key in the `$_SERVER` superglobal.
     return array(
@@ -46,13 +46,13 @@ $ac->add_filter('zencache\\share::current_ip_sources', function($sources)
 
 ### Forcing the Old Behavior
 
-Older versions of ZenCache used only `$_SERVER['REMOTE_ADDR']`. If you want to revert to this old behavior, you can create an [Advanced Cache Plugin](https://github.com/websharks/zencache-kb/issues/5); create this directory and file:
+Older versions of Comet Cache used only `$_SERVER['REMOTE_ADDR']`. If you want to revert to this old behavior, you can create an [Advanced Cache Plugin](https://github.com/websharks/comet-cache-kb/issues/5); create this directory and file:
 `/wp-content/ac-plugins/zc-ip-source-remote-addr-only.php`
 
 ```php
 <?php
-$ac = $GLOBALS['zencache__advanced_cache'];
-$ac->add_filter('zencache\\share::current_ip_prioritize_remote_addr', function(){ return true; });
+$ac = $GLOBALS['comet_cache__advanced_cache'];
+$ac->add_filter('comet_cache\\share::current_ip_prioritize_remote_addr', function(){ return true; });
 ```
 
 With this filter in place, if `$_SERVER['REMOTE_ADDR']` is set and it's a public IP, we will use that without checking anything else; i.e., attempting to replicate the old behavior.

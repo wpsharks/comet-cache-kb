@@ -3,14 +3,14 @@ title: How do I define a WordPress temp directory?
 categories: questions
 tags: error-messages
 author: raamdev
-github-issue: https://github.com/websharks/zencache-kb/issues/33
+github-issue: https://github.com/websharks/comet-cache-kb/issues/33
 toc-enable: off
 ---
 
 If your web host prevents WordPress from opening files in `/tmp/` (a common default temp directory for PHP), then you may receive an error like the following:
 
-> [10-Mar-2015 07:04:35 UTC] PHP Warning: fopen(/tmp/zencache-54843.lock): failed to open stream: Permission denied in /var/www/example.com/wp-content/plugins/zencache-pro/includes/share.php on line 1938 
-> [10-Mar-2015 07:04:35 UTC] PHP Fatal error: Uncaught exception 'Exception' with message 'Unable to obtain an exclusive lock.' in /var/www/example.com/wp-content/plugins/zencache-pro/includes/share.php:1939 
+> [10-Mar-2015 07:04:35 UTC] PHP Warning: fopen(/tmp/comet-cache-54843.lock): failed to open stream: Permission denied in /var/www/example.com/wp-content/plugins/comet-cache-pro/includes/share.php on line 1938
+> [10-Mar-2015 07:04:35 UTC] PHP Fatal error: Uncaught exception 'Exception' with message 'Unable to obtain an exclusive lock.' in /var/www/example.com/wp-content/plugins/comet-cache-pro/includes/share.php:1939 
 
 To fix this, you can define a custom temp directory specifically for WordPress and then give that custom temp directory write permissions (e.g., `755` or `777`).
 

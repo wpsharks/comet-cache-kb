@@ -3,7 +3,7 @@ title: Why are some scripts being ignored by HTML Compression?
 categories: questions
 tags: html-compression
 author: raamdev
-github-issue: https://github.com/websharks/zencache-kb/issues/62
+github-issue: https://github.com/websharks/comet-cache-kb/issues/62
 toc-enable: off
 ---
 

@@ -3,7 +3,7 @@ title: How can I disable the Quick Cache deprecated notice?
 categories: questions
 tags: error-messages
 author: raamdev
-github-issue: https://github.com/websharks/zencache-kb/issues/37
+github-issue: https://github.com/websharks/comet-cache-kb/issues/37
 ---
 
 Now that Quick Cache is no longer being maintained, a deprecated notice appears in the Options panel:

@@ -3,12 +3,12 @@ title: Introduction to Dynamic Version Salts
 categories: tutorials
 tags: dynamic-version-salt, themeplugin-developers
 author: raamdev
-github-issue: https://github.com/websharks/zencache-kb/issues/21
+github-issue: https://github.com/websharks/comet-cache-kb/issues/21
 ---
 
-_Note: ZenCache stores its cache files for each page of your site based on the `PROTOCOL://HOST/URI` that it's caching. For more information about how ZenCache builds its cache files, please read [Branched Cache Structure](https://zencache.com/kb-article/what-is-the-branched-cache-structure/)._
+_Note: Comet Cache stores its cache files for each page of your site based on the `PROTOCOL://HOST/URI` that it's caching. For more information about how Comet Cache builds its cache files, please read [Branched Cache Structure](https://cometcache.com/kb-article/what-is-the-branched-cache-structure/)._
 
-_Understanding how ZenCache builds cache files is a prerequisite to understanding how Dynamic Version Salts work; otherwise you will be confused by the details below. :-) Please give [this article](https://zencache.com/kb-article/what-is-the-branched-cache-structure/) a quick look-see before you read further._
+_Understanding how Comet Cache builds cache files is a prerequisite to understanding how Dynamic Version Salts work; otherwise you will be confused by the details below. :-) Please give [this article](https://cometcache.com/kb-article/what-is-the-branched-cache-structure/) a quick look-see before you read further._
 
 ## What is a "Dynamic Version Salt"?
 
@@ -22,19 +22,19 @@ For example, if your Version Salt is a cookie, and a visitor has this cookie (of
 
 Let's pretend that you have a WordPress Post titled *"Funky Chicken"*, with the slug: `funky-chicken` which is being served by your WordPress installation which lives on the `example.com` domain. In this example, let's assume the full URL to this Post is `http://example.com/posts/funky-chicken/`
 
-The main ZenCache storage directory is located here: `/wp-content/cache/zencache`. By default, the cache file for this example Post with the slug `funky-chicken` would be stored and served from the following location (inside the main ZenCache storage directory).
+The main Comet Cache storage directory is located here: `/wp-content/cache/comet-cache`. By default, the cache file for this example Post with the slug `funky-chicken` would be stored and served from the following location (inside the main Comet Cache storage directory).
 
 ```
 .../cache/http/example-com/posts/funky-chicken.html
 ```
 
-*Nothing special here, this is how ZenCache works. See [Branched Cache Structure](https://zencache.com/kb-article/what-is-the-branched-cache-structure/).*
+*Nothing special here, this is how Comet Cache works. See [Branched Cache Structure](https://cometcache.com/kb-article/what-is-the-branched-cache-structure/).*
 
 ##### Spicing Things Up (Adding a Version Salt)
 
-Now let's enter the following into the Version Salt field for ZenCache, so that we may create multiple versions of this cache file when we want to; and each of these versions will be based on the value of a cookie named `mycookie`; available from the [PHP Super Global](http://www.php.net/manual/en/features.cookies.php) `$_COOKIE['mycookie']`.
+Now let's enter the following into the Version Salt field for Comet Cache, so that we may create multiple versions of this cache file when we want to; and each of these versions will be based on the value of a cookie named `mycookie`; available from the [PHP Super Global](http://www.php.net/manual/en/features.cookies.php) `$_COOKIE['mycookie']`.
 
-I will enter the following into the Version Salt configuration field provided by ZenCache in the Dashboard. A Version Salt can be a string literal, a PHP expression that produces a string, a PHP Constant that is equal to a string, etc... so long as it results in a string value. An empty string is fine too (i.e. if I don't want to use a Version Salt in some cases).
+I will enter the following into the Version Salt configuration field provided by Comet Cache in the Dashboard. A Version Salt can be a string literal, a PHP expression that produces a string, a PHP Constant that is equal to a string, etc... so long as it results in a string value. An empty string is fine too (i.e. if I don't want to use a Version Salt in some cases).
 
 I will use the following for my Version Salt:
 
@@ -50,17 +50,17 @@ So for instance, if the value of `$_COOKIE['mycookie']` is the string `chicken l
 /cache/http/example-com/posts/funky-chicken.v/chicken-lover-34.html
 ```
 
-Notice that ZenCache detects the presence of a Version Salt, and automatically appends a `.v` (creating a sub-directory) and a cached variation is stored into the slugified cookie value; i.e. `chicken lover 34` automatically becomes `chicken-lover-34.html` ~ nice!
+Notice that Comet Cache detects the presence of a Version Salt, and automatically appends a `.v` (creating a sub-directory) and a cached variation is stored into the slugified cookie value; i.e. `chicken lover 34` automatically becomes `chicken-lover-34.html` ~ nice!
 
 ----
 
 ## Environment Variables as a Version Salt
 
-Instead of creating a Version Salt based on a cookie, we could base it on the [User-Agent](http://en.wikipedia.org/wiki/User_agent) that a visitor uses to access the site (i.e. the device they are using). If you wanted to maintain a separate cache file for visitors who came to your site with an iPhone, you could detect the User-Agent string using the [PHP Environment Variable](http://www.php.net/manual/en/reserved.variables.server.php) `$_SERVER['HTTP_USER_AGENT']`. We can tell ZenCache to create a separate version of the cache specifically for iPhone users.
+Instead of creating a Version Salt based on a cookie, we could base it on the [User-Agent](http://en.wikipedia.org/wiki/User_agent) that a visitor uses to access the site (i.e. the device they are using). If you wanted to maintain a separate cache file for visitors who came to your site with an iPhone, you could detect the User-Agent string using the [PHP Environment Variable](http://www.php.net/manual/en/reserved.variables.server.php) `$_SERVER['HTTP_USER_AGENT']`. We can tell Comet Cache to create a separate version of the cache specifically for iPhone users.
 
 Using the same *"Funky Chicken"* example Post: `http://example.com/posts/funky-chicken/`
 
-I will enter the following into the Version Salt configuration field provided by ZenCache in the Dashboard. Remember, a Version Salt can also be a PHP Expression (very handy). This makes it possible for me to use a [PHP Ternary Expression](http://davidwalsh.name/php-shorthand-if-else-ternary-operators) to achieve what I want. In this case, I want to create a seperate version of the cache that is specifically for users who access the site from their iPhone. I will use the following for my Version Salt:
+I will enter the following into the Version Salt configuration field provided by Comet Cache in the Dashboard. Remember, a Version Salt can also be a PHP Expression (very handy). This makes it possible for me to use a [PHP Ternary Expression](http://davidwalsh.name/php-shorthand-if-else-ternary-operators) to achieve what I want. In this case, I want to create a seperate version of the cache that is specifically for users who access the site from their iPhone. I will use the following for my Version Salt:
 
 ```
 preg_match('/iPhone/i', $_SERVER['HTTP_USER_AGENT']) ? 'iPhones' : ''
@@ -72,7 +72,7 @@ If the visitor comes to my site from an iPhone, I set the Version Salt to `iPhon
 /cache/http/example-com/posts/funky-chicken.v/iPhones.html
 ```
 
-Notice that ZenCache detects the presence of a Version Salt, and automatically appends a `.v` (creating a sub-directory) and a cached variation is stored for my Version Salt; i.e. `iPhones.html` ~ perfect!
+Notice that Comet Cache detects the presence of a Version Salt, and automatically appends a `.v` (creating a sub-directory) and a cached variation is stored for my Version Salt; i.e. `iPhones.html` ~ perfect!
 
 ## What else can be a 'Version Salt'?
 
@@ -82,23 +82,23 @@ When using multiple variables, please separate them with a dot; i.e. [concatenat
 
 Other ideas might include Global Variables or Constants defined inside your [/wp-config.php](http://codex.wordpress.org/Editing_wp-config.php) file. For instance, `$GLOBALS['table_prefix']` is a popular one. Or the WordPress Constant `WPLANG`, or anything else you define yourself inside `/wp-config.php`
 
-*Just be sure that whatever you choose is available early-on; i.e. before ZenCache runs, so that it's available to be used in cache path formulation. For instance, something like `get_current_user_id()` would not work here, as this core WP function is not available to ZenCache when it checks for a Version Salt. If you happen to choose something that is not yet defined when ZenCache runs, you might produce an error on your site. See also, [this line of code in the WP core](https://github.com/WordPress/WordPress/blob/master/wp-settings.php#L64) to learn when ZenCache is loaded by WordPress.*
+*Just be sure that whatever you choose is available early-on; i.e. before Comet Cache runs, so that it's available to be used in cache path formulation. For instance, something like `get_current_user_id()` would not work here, as this core WP function is not available to Comet Cache when it checks for a Version Salt. If you happen to choose something that is not yet defined when Comet Cache runs, you might produce an error on your site. See also, [this line of code in the WP core](https://github.com/WordPress/WordPress/blob/master/wp-settings.php#L64) to learn when Comet Cache is loaded by WordPress.*
 
 ## Version Salts via "Advanced Cache Plugins"
 
-Version Salt functionality (from a UI perspective) is available only in ZenCache Pro. However, it is possible *(even in the lite version of ZenCache)* to create a Version Salt through the use of an "Advanced Cache Plugin".
+Version Salt functionality (from a UI perspective) is available only in Comet Cache Pro. However, it is possible *(even in the lite version of Comet Cache)* to create a Version Salt through the use of an "Advanced Cache Plugin".
 
-Here is an [example plugin file](https://github.com/websharks/zencache/blob/000000-dev/zencache/includes/ac-plugin.example.php) that creates a truly dynamic Version Salt, and this will work perfectly in both the lite and pro versions of ZenCache.
+Here is an [example plugin file](https://github.com/websharks/comet-cache/blob/000000-dev/comet-cache/includes/ac-plugin.example.php) that creates a truly dynamic Version Salt, and this will work perfectly in both the lite and pro versions of Comet Cache.
 
-#### Theme/Plugin Developers Integrating w/ ZenCache
+#### Theme/Plugin Developers Integrating w/ Comet Cache
 
-If you are a theme or plugin developer that would like to create a dynamic Version Salt that works with your application, please go by the [example plugin file](https://github.com/websharks/zencache/blob/000000-dev/zencache/includes/ac-plugin.example.php). Advanced Cache Plugins (aka: *ac-plugins* — shorter) are the recommended way to integrate your theme/plugin with ZenCache; i.e. when you need to construct cache variations for one reason or another. Feel free to ask questions [here](https://github.com/websharks/zencache/issues) as you work through your integration.
+If you are a theme or plugin developer that would like to create a dynamic Version Salt that works with your application, please go by the [example plugin file](https://github.com/websharks/comet-cache/blob/000000-dev/comet-cache/includes/ac-plugin.example.php). Advanced Cache Plugins (aka: *ac-plugins* — shorter) are the recommended way to integrate your theme/plugin with Comet Cache; i.e. when you need to construct cache variations for one reason or another. Feel free to ask questions [here](https://github.com/websharks/comet-cache/issues) as you work through your integration.
 
 ## Why am I getting PHP Notices related to my Version Salt?
 
 A version salt of `$_SESSION['example']` on a site that is running in `WP_DEBUG` mode; will kick back an `E_NOTICE ` from PHP, since this is unique to certain visitors with a session and may not be present at all times. Thus, `$_SESSION['example']` is technically invalid, at least some of the time.
 
-I would suggest `@$_SESSION['example']` as the version salt. Or, even better: 
+I would suggest `@$_SESSION['example']` as the version salt. Or, even better:
 ```
 isset($_SESSION['example']) && !empty($_SESSION['example']) ? $_SESSION['example'] : ''
 ```
@@ -111,7 +111,7 @@ if(isset($_SESSION['example']) && !empty($_SESSION['example']))
     define('MY_VERSION_SALT', $_SESSION['example']);
 else define('MY_VERSION_SALT', ''); // Default value.
 ```
-Your ZenCache version salt would then become...
+Your Comet Cache version salt would then become...
 ```
 MY_VERSION_SALT
 ```

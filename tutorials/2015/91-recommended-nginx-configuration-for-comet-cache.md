@@ -1,13 +1,13 @@
 ---
-title: Recommended Nginx Configuration for ZenCache
+title: Recommended Nginx Configuration for Comet Cache
 categories: tutorials
 tags: nginx, static-cdn-filters, installation-upgrading
 author: raamdev
 github-issue:
-github-issue: https://github.com/websharks/zencache-kb/issues/91
+github-issue: https://github.com/websharks/comet-cache-kb/issues/91
 ---
 
-The following Nginx configuration recommendations are to be used _in addition to_ an existing Nginx configuration. If you need help getting WordPress working with an Nginx server, please consult the [WordPress Nginx](https://codex.wordpress.org/Nginx) page. The following contains configuration relevant to improving speed on your site and for the best compatibility with ZenCache.
+The following Nginx configuration recommendations are to be used _in addition to_ an existing Nginx configuration. If you need help getting WordPress working with an Nginx server, please consult the [WordPress Nginx](https://codex.wordpress.org/Nginx) page. The following contains configuration relevant to improving speed on your site and for the best compatibility with Comet Cache.
 
 See the comments inside the configuration below for further details about each section.
 
@@ -37,13 +37,13 @@ server {
 
   # ↓ See: http://davidwalsh.name/cdn-fonts
   # This prevents cross-domain security issues related to fonts.
-  # Only needed if you use Static CDN Filters in ZenCache.
+  # Only needed if you use Static CDN Filters in Comet Cache.
 
   location ~* \.(?:ttf|ttc|otf|eot|woff|woff2|css|js)$ {
       add_header Access-Control-Allow-Origin *;
   }
 
-  # ↓ This is optional, but suggested. It's a flag to tell ZenCache
+  # ↓ This is optional, but suggested. It's a flag to tell Comet Cache
   # that you completed this Nginx configuration.
 
   location ~* \.php$ {
@@ -52,4 +52,4 @@ server {
 }
 ```
 
-_**Important Note:** The `server{}` configuration block in this example is incomplete; i.e., it only contains the configuration relevant to improving speed on your site and for the best compatibility with ZenCache. It does not include things like `listen` and `try_files` directives. Please consult the [Nginx documentation](http://nginx.org/en/docs/) if you need help with that part._
+_**Important Note:** The `server{}` configuration block in this example is incomplete; i.e., it only contains the configuration relevant to improving speed on your site and for the best compatibility with Comet Cache. It does not include things like `listen` and `try_files` directives. Please consult the [Nginx documentation](http://nginx.org/en/docs/) if you need help with that part._

@@ -1,9 +1,9 @@
 ---
-title: Why doesn't ZenCache remove query strings from static resources?
+title: Why doesn't Comet Cache remove query strings from static resources?
 categories: questions
 tags: html-compression, static-cdn-filters, get-requests
 author: raamdev
-github-issue: https://github.com/websharks/zencache-kb/issues/61
+github-issue: https://github.com/websharks/comet-cache-kb/issues/61
 toc-enable: off
 ---
 
@@ -19,7 +19,7 @@ If a plugin or theme developer chooses _not_ to use this Version Parameter, Word
 
 In a WordPress environment, you will be running many different plugins, each with its own version. You'll also be using a WordPress theme, which also has a specific version and will get updated from time to time.
 
-When someone visits your website, all of the JavaScript and CSS files may be _cached_ (stored), either in the visitors web browser or, if you're using the [ZenCache Static CDN Filters](http://zencache.com/kb-article/introduction-to-static-cdn-filters/), by your CDN provider.
+When someone visits your website, all of the JavaScript and CSS files may be _cached_ (stored), either in the visitors web browser or, if you're using the [Comet Cache Static CDN Filters](http://cometcache.com/kb-article/introduction-to-static-cdn-filters/), by your CDN provider.
 
 When you update WordPress, or when you update a WordPress theme or plugin, those cached JavaScript and CSS files will likely change. However, the only way to tell visitors' browsers and your CDN provider that the files have changed is to _change the link to the files_. 
 
@@ -27,4 +27,4 @@ How do we change the link to each file without actually needing to change the na
 
 That `?ver=1.6` portion is the "Query String". If we removed that query string--as many speed testing services recommend--then your WordPress site wouldn't function properly. Your visitors would end up seeing old versions of your site!
 
-It's for this reason that ZenCache does not remove query strings from static resources--doing so would essentially break your WordPress site.
+It's for this reason that Comet Cache does not remove query strings from static resources--doing so would essentially break your WordPress site.
