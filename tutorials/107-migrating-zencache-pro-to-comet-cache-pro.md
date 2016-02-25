@@ -42,9 +42,11 @@ No. All ZenCache Pro customers receive a free upgrade to Comet Cache Pro.
 
 Please Deactivate ZenCache and/or ZenCache Pro first (_don't_ delete the ZenCache plugin until after you've installed Comet Cache; that way your existing ZenCache options will be preserved in Comet Cache). Then, follow the instructions above to Install and Activate the new Comet Cache Pro plugin. That's it! :-)
 
-### Can I delete ZenCache Pro before installing Comet Cache Pro?
+### Can I delete ZenCache Pro?
 
-Yes. If you don't have any custom ZenCache settings that you want Comet Cache Pro to import, then deleting ZenCache before installing Comet Cache Pro will be fine.
+If you have any custom ZenCache settings that you want Comet Cache Pro to import, then you can leave ZenCache installed until after you install Comet Cache. When Comet Cache is installed, it will look for any existing ZenCache plugin settings and copy those over to Comet Cache.
+
+Once Comet Cache has been installed, you can delete the ZenCache plugin.
 
 ### Will my old ZenCache settings carry over to Comet Cache?
 
