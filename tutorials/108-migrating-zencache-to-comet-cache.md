@@ -67,7 +67,7 @@ If ZenCache is currently active, deactivate the ZenCache plugin in **WordPress D
 
 If the error is preventing you from accessing your WordPress Admin Dashboard, start over from scratch by following these [manual uninstallation instructions](https://cometcache.com/kb-article/how-do-i-uninstall-comet-cache/#toc-86754ab8) for **both** ZenCache and Comet Cache. Once that's done, you can follow the [Comet Cache Lite installation instructions](https://cometcache.com/lite-installation/).
 
-If the fatal error is not preventing you from accessing your WordPress Admin Dashboard, and you're seeing the fatal error while activating Comet Cache or removing ZenCache, see the following two sections.
+If the fatal error is not preventing you from accessing your WordPress Admin Dashboard, and you're seeing the fatal error while activating Comet Cache or removing ZenCache, see the following section.
 
 #### Fatal Error While Activating Comet Cache or Removing ZenCache
 
