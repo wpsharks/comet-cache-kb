@@ -25,7 +25,11 @@ As an existing ZenCache Pro customer, your ZenCache Pro license entitles you to 
 
      ![2016-02-19_15-44-39](https://cloud.githubusercontent.com/assets/53005/13188483/c8a17aec-d71f-11e5-8376-ff8fd35d5b7d.png)
 
-4. Now upload and activate `comet-cache-pro.zip` (or it might be named something like: `comet-cache-pro-vXXXXXX.zip`). You can upload the ZIP file using your WordPress Dashboard; i.e. `Dashboard → Plugins → Add New → Upload Plugin`. _See attached screenshots for example._
+4. If you have ZenCache or ZenCache Pro currently active, deactivate ZenCache before installing Comet Cache Pro.
+
+     ![2016-02-27_08-42-46](https://cloud.githubusercontent.com/assets/53005/13373181/515b84b8-dd2e-11e5-8bc5-5d760ffcf1d6.png)
+
+5. Now upload and activate `comet-cache-pro.zip` (or it might be named something like: `comet-cache-pro-vXXXXXX.zip`). You can upload the ZIP file using your WordPress Dashboard; i.e. `Dashboard → Plugins → Add New → Upload Plugin`. _See attached screenshots for example._
 
      ![2015-02-05_05-08-28](https://cloud.githubusercontent.com/assets/1563559/6061535/11454c70-acf5-11e4-8439-2fcd036da63b.png)
      ![2016-02-19_15-49-01](https://cloud.githubusercontent.com/assets/53005/13188633/86f8f196-d720-11e5-9450-2c8bf76331c9.png)
@@ -65,6 +69,24 @@ If you still have trouble accessing your Comet Cache Pro license, please [open a
 ### If I configure Comet Cache Pro to perform automatic updates, what license key should I enter? The one for ZenCache Pro, or the one for Comet Cache Pro?
 
 Please use a new license key for Comet Cache Pro. You will find your new license key for Comet Cache Pro at CometCache.com. Please check your [My Account](http://cometcache.com/account/) page.
+
+### I received a Fatal Error while migrating; help!
+
+If the error is preventing you from accessing your WordPress Admin Dashboard, start over from scratch by following these [manual uninstallation instructions](https://cometcache.com/kb-article/how-do-i-uninstall-comet-cache/#toc-86754ab8) for **both** ZenCache and Comet Cache. Once that's done, you can follow the [Comet Cache Pro installation instructions](https://cometcache.com/pro-installation/).
+
+If the fatal error is not preventing you from accessing your WordPress Admin Dashboard, and you're seeing the fatal error while activating Comet Cache or removing ZenCache, see the following section.
+
+#### Fatal Error While Activating Comet Cache or Removing ZenCache
+
+If you can still access your WordPress Dashboard and you're receiving a fatal error message while activating Comet Cache or removing ZenCache, follow these steps:
+
+1. In **WordPress Dashboard → Plugins**, make sure that both ZenCache **and** Comet Cache are deactivated
+2. In **WordPress Dashboard → Plugins**, activate ZenCache
+3. In **WordPress Dashboard → ZenCache → Plugin Deletion Safeguards**, make sure "Yes, uninstall (completely erase)" is selected and then click "Save All Changes" at the very bottom of the page.
+4. In **WordPress Dashboard → Plugins**, deactivate ZenCache
+5. In **WordPress Dashboard → Plugins**, delete ZenCache
+
+Now you should be able to activate Comet Cache without issue. If you continue to see a Fatal Error, follow these [manual uninstallation instructions](https://cometcache.com/kb-article/how-do-i-uninstall-comet-cache/#toc-86754ab8) for both ZenCache and Comet Cache, and then try reinstalling Comet Cache.
 
 ## Getting Help with Other Issues
 
