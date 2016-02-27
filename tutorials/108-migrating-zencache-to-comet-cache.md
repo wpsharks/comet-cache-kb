@@ -63,33 +63,21 @@ Most likely, yes. We have built Comet Cache to be backwards-compatible with ZenC
 
 If ZenCache is currently active, deactivate the ZenCache plugin in **WordPress Dashboard → Plugins**. After you have deactivated ZenCache, you can donwload and install Comet Cache. Comet Cache will automatically detect and preserve your existing ZenCache settings. Once Comet Cache has been activated, ZenCache can be deleted.
 
-### I ran into a Fatal Error while migrating; help!
+### I received a Fatal Error while migrating; help!
 
 If the error is preventing you from accessing your WordPress Admin Dashboard, start over from scratch by following these [manual uninstallation instructions](https://cometcache.com/kb-article/how-do-i-uninstall-comet-cache/#toc-86754ab8) for **both** ZenCache and Comet Cache. Once that's done, you can follow the [Comet Cache Lite installation instructions](https://cometcache.com/lite-installation/).
 
 If the fatal error is not preventing you from accessing your WordPress Admin Dashboard, and you're seeing the fatal error while activating Comet Cache or removing ZenCache, see the following two sections.
 
-#### Fatal Error Activating Comet Cache
+#### Fatal Error While Activating Comet Cache or Removing ZenCache
 
-If you can still access your WordPress Dashboard and you're receiving a fatal error message while activating Comet Cache, follow these steps:
+If you can still access your WordPress Dashboard and you're receiving a fatal error message while activating Comet Cache or removing ZenCache, follow these steps:
 
 1. In **WordPress Dashboard → Plugins**, make sure that both ZenCache **and** Comet Cache are deactivated
 2. In **WordPress Dashboard → Plugins**, activate ZenCache
 3. In **WordPress Dashboard → ZenCache → Plugin Deletion Safeguards**, make sure "Yes, uninstall (completely erase)" is selected and then click "Save All Changes" at the very bottom of the page.
 4. In **WordPress Dashboard → Plugins**, deactivate ZenCache
 5. In **WordPress Dashboard → Plugins**, delete ZenCache
-
-Now you should be able to activate Comet Cache without issue. If you continue to see a Fatal Error, follow these [manual uninstallation instructions](https://cometcache.com/kb-article/how-do-i-uninstall-comet-cache/#toc-86754ab8) for both ZenCache and Comet Cache, and then try reinstalling Comet Cache.
-
-#### Fatal Error Removing ZenCache
-
-If you're still able to access your WordPress Dashboard and you're receiving a fatal error message while removing ZenCache, follow these steps:
-
-1. In **WordPress Dashboard → Plugins**, make sure that both ZenCache **and** Comet Cache are deactivated
-2. In **WordPress Dashboard → Plugins**, activate ZenCache
-3. In **WordPress Dashboard → ZenCache → Plugin Deletion Safeguards**, make sure "Yes, uninstall (completely erase)" is selected and then click "Save All Changes" at the very bottom of the page.
-4. In **WordPress Dashboard → Plugins**, deactivate ZenCache
-5. In `**WordPress Dashboard → Plugins**, delete ZenCache
 
 Now you should be able to activate Comet Cache without issue. If you continue to see a Fatal Error, follow these [manual uninstallation instructions](https://cometcache.com/kb-article/how-do-i-uninstall-comet-cache/#toc-86754ab8) for both ZenCache and Comet Cache, and then try reinstalling Comet Cache.
 
