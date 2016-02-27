@@ -4,7 +4,7 @@ categories: questions
 tags: installation-upgrading
 author: raamdev
 github-issue: https://github.com/websharks/comet-cache-kb/issues/78
-toc-enable: off
+toc-enable: on
 ---
 
 You can completely remove Comet Cache and erase all of the options from the WordPress database by following these steps:
@@ -34,3 +34,7 @@ To uninstall Comet Cache or Comet Cache Pro via FTP, follow these steps:
 1. Delete the `comet-cache` directory from inside `wp-content/cache/`
 
 The Comet Cache plugin has now been removed. Note that removing the plugin manually does not erase any of the plugin options from within the WordPress database. To erase those options, you must disable Plugin Deletion Safeguards and Deactivate/Delete the plugin from the WordPress Dashboard.
+
+### How do I manually uninstall ZenCache?
+
+The instructions for manually uninstalling ZenCache are the same as for Comet Cache. Simply replace `comet-cache` or `comet-cache-pro` with `zencache` or `zencache-pro`. 
