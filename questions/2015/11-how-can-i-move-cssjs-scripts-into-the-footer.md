@@ -6,7 +6,7 @@ author: jaswsinc
 github-issue: https://github.com/websharks/comet-cache-kb/issues/11
 toc-enable: off
 ---
-The HTML Compressor will not move the resources that it finds (see [Why doesn't Comet Cache move CSS/JS scripts into the footer?](http://cometcache.com/kb-article/why-doesnt-comet-cache-move-cssjs-into-the-footer/)). This means that if the original resources were in the `<head>`, they remain in the `<head>` section after compression/consolidation also. 
+The HTML Compressor will not move the resources that it finds (see [Why doesn't Comet Cache move CSS/JS scripts into the footer?](https://cometcache.com/kb-article/why-doesnt-comet-cache-eliminate-render-blocking-and-move-cssjs-scripts-into-the-footer/)). This means that if the original resources were in the `<head>`, they remain in the `<head>` section after compression/consolidation also. 
 
 This is to avoid a scenario where moving resources into another location could introduce conflicts in the way these JavaScript resources are used in other parts of the page; i.e. the HTML Compressor does not make a decision about where to put the JavaScript resources, only in how they are compressed and combined together in the original location where they were found.
 
