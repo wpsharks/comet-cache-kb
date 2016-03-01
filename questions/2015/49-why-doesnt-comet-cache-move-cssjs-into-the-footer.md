@@ -66,5 +66,3 @@ For this reason it really needs to be determined by the plugin/theme developers 
 WordPress has a function used by many theme/plugin developers called: [wp_enqueue_script()](http://codex.wordpress.org/Function_Reference/wp_enqueue_script), and this function accepts an argument called `$in_footer`. If you set this to TRUE (or your theme/plugin developers set this to TRUE), then the Comet Cache HTML Compressor will automatically detect this and there's no need to do anything.
 
 If you're a theme developer and you're not using the [wp_enqueue_script()](http://codex.wordpress.org/Function_Reference/wp_enqueue_script) function (you really should be), or if you're a site owner and you want to specifically define some static resources that the HTML Compressor should move to the footer, see [How can I move CSS/JS scripts into the footer?](https://cometcache.com/kb-article/how-can-i-move-cssjs-scripts-into-the-footer/)
-
-See also: [How can I move CSS/JS scripts into the footer?](http://cometcache.com/kb-article/how-can-i-move-cssjs-scripts-into-the-footer/)
