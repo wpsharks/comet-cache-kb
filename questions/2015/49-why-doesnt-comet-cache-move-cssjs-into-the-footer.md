@@ -13,7 +13,7 @@ Page speed testing services like Google PageSpeed and GTMetrix consider it a per
 
 However, an important point to keep in mind is that speed testing services are often not specifically geared towards WordPress sites--they are simply providing advice applicable to websites in general. WordPress sites are often very dynamic, combining a WordPress theme with many WordPress plugins, each one created by a different developer.
 
-If scripts should (or can) be in footer, they need to be placed in the footer by a site/theme designer or the theme/plugin developer needs to indicate to WordPress that the script they are loading can be loaded in the footer (this is something that WordPress makes possible with the [`wp_enqueue_script`](http://codex.wordpress.org/Function_Reference/wp_enqueue_script) function). Comet Cache can come back in later and compress and combine the CSS/JS files and it will obey any load-in-footer settings defined by other plugin/theme developers, but moving them around itself is another matter entirely.
+If scripts should (or can) be in footer, they need to be placed in the footer by a site/theme designer or the theme/plugin developer needs to indicate to WordPress that the script they are loading can be loaded in the footer (this is something that WordPress makes possible with the [wp_enqueue_script()](http://codex.wordpress.org/Function_Reference/wp_enqueue_script) function). Comet Cache can come back in later and compress and combine the CSS/JS files and it will obey any load-in-footer settings defined by other plugin/theme developers, but moving them around itself is another matter entirely.
 
 ### What would happen if Comet Cache moved all CSS/JS files to the footer?
 
@@ -63,7 +63,7 @@ For this reason it really needs to be determined by the plugin/theme developers 
 
 ### How can a Plugin/Theme developer ensure scripts load in the footer?
 
-WordPress has a function used by many theme/plugin developers called: [wp_enqueue_script](http://codex.wordpress.org/Function_Reference/wp_enqueue_script), and this function accepts an argument called `$in_footer`. 
+WordPress has a function used by many theme/plugin developers called: [wp_enqueue_script()](http://codex.wordpress.org/Function_Reference/wp_enqueue_script), and this function accepts an argument called `$in_footer`. 
 
 If you set this to TRUE (or your theme/plugin developers set this to TRUE), then the Comet Cache HTML Compressor can automatically detect this and there's no need to wrap Footer Scripts inside `<!-- footer-scripts -->` on your own.
 
