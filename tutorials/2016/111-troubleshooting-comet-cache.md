@@ -60,6 +60,8 @@ Comet Cache and Comet Cache Pro both support the Nginx web server. If you're hav
 
 - If you have Zlib compression enabled, try disabling it.
 
+See also: [Recommended Nginx Configuration for Comet Cache](https://cometcache.com/kb-article/recommended-nginx-configuration-for-comet-cache/)
+
 ## Mobile Themes
 
 If you're having issues with your Mobile Theme appearing on the Desktop, or the Desktop Theme appearing on mobile devices, Comet Cache is probably caching your mobile theme and then showing it to all visitors, including your Desktop visitors. To prevent this from happening, you'll need to tell Comet Cache to disable caching for mobile devices. (We're working on a [Mobile Mode](https://github.com/websharks/comet-cache/issues/471) to add full support for mobile caching.)
@@ -83,6 +85,8 @@ webOS
 ## Auto-Cache Engine
 
 When enabled, the Auto-Cache Engine runs every 15 minutes via WP Cron. If the Auto-Cache Engine doesn't seem to be working, you can try manually initiating it by visiting `http://yoursite.com/?comet_cache__auto_cache_cron=yes`.
+
+See also: [Auto-Cache Engine KB Articles](https://cometcache.com/kb/kb-tag/auto-cache-engine/)
 
 ## Pro Updater Not Working
 
