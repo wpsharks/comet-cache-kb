@@ -4,9 +4,10 @@ categories: questions
 tags: cache-locking
 author: jaswsinc
 github-issue: https://github.com/websharks/comet-cache-kb/issues/16
+toc-enable: false
 ---
 
-**See also, this primer:** [What is cache locking?](https://cometcache.com/kb-article/what-is-cache-locking/)
+**See also:** [What is cache locking?](https://cometcache.com/kb-article/what-is-cache-locking/)
 
 ---
 
