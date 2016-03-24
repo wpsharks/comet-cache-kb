@@ -1,9 +1,13 @@
 ---
-title: How do I change the cache locking type (flock vs sem_get)?
+title: How do I change the cache locking type?
 categories: questions
 tags: cache-locking
 author: jaswsinc
 github-issue: https://github.com/websharks/comet-cache-kb/issues/16
+---
+
+Primer: [What is cache locking?](https://cometcache.com/kb-article/what-is-cache-locking/)
+
 ---
 
 If you are experiencing `rename()` errors, or other PHP errors (PHP Exceptions) related to a race-condition; it could be attributed to file/directory locking. The concept of locking the cache directory and/or specific files in the cache directory is precisely what prevents race conditions and/or directory rename failures in Comet Cache.
