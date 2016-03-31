@@ -24,7 +24,7 @@ _The above will clear this specific URL from the cache._
 
 ## Clearing Multiple URLs Matching a Pattern
 
-The `comet_cache::clearUrl()` function also supports [Watered-Down Regex](https://cometcache.com/kb-article/watered-down-regex-syntax/), which makes it easy to clear multiple URLs matching a pattern that you supply.
+The `comet_cache::clearUrl()` function also supports [Watered-Down Regex](https://cometcache.com/kb-article/watered-down-regex-syntax/), making it easy to clear multiple URLs matching a pattern.
 
 ```php
 <?php
