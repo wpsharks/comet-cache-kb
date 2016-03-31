@@ -57,7 +57,7 @@ comet_cache::clearUser(123);
 
 _The above will clear this specific User ID from the cache._
 
-## Clearing Current User
+## Clearing the Current User ID
 
 ```php
 <?php
