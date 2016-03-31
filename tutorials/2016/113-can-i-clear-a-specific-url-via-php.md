@@ -9,7 +9,7 @@ github-issue: https://github.com/websharks/comet-cache-kb/issues/113
 
 Sometimes it is nice to take more control over the way cache files are cleared. Using PHP functions provided by the Comet Cache plugin is one of the most powerful ways to do that. There are a number of API Functions provided by the Comet Cache plugin. I will mention a few of them below and provide examples of their use.
 
-_**Note:** Before you integrate any of the functions shown below, it's important to remember that much of WordPress is driven by hooks and filters. For that reason, before you call any of these functions, please be sure that the [`init` hook](https://codex.wordpress.org/Plugin_API/Action_Reference/init) has been fired first; i.e., that the Comet Cache plugin has been loaded and it available for use within your code._
+_**Note:** Before you integrate any of the functions shown below, it's important to remember that much of WordPress is driven by hooks and filters. For that reason, before you call any of these functions, please be sure that the [`init` hook](https://codex.wordpress.org/Plugin_API/Action_Reference/init) has been fired first; i.e., that the Comet Cache plugin has been loaded and is available for use within your code._
 
 ---
 
