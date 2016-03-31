@@ -1,5 +1,5 @@
 ---
-title: Clearing a specific URL via PHP
+title: Clearing a Specific URL via PHP
 categories: tutorials
 tags: clearing-the-cache
 author: jaswsinc
