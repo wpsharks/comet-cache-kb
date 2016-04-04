@@ -88,7 +88,7 @@ Other ideas might include Global Variables or Constants defined inside your [/wp
 
 Version Salt functionality (from a UI perspective) is available only in Comet Cache Pro. However, it is possible *(even in the lite version of Comet Cache)* to create a Version Salt through the use of an "Advanced Cache Plugin".
 
-Here is an [example plugin file](https://github.com/websharks/comet-cache/blob/000000-dev/comet-cache/includes/ac-plugin.example.php) that creates a truly dynamic Version Salt, and this will work perfectly in both the lite and pro versions of Comet Cache.
+Here is an [example plugin file](https://github.com/websharks/comet-cache-pro/blob/160227/src/includes/templates/ac-plugin.txt) that creates a truly dynamic Version Salt, and this will work perfectly in both the lite and pro versions of Comet Cache.
 
 #### Theme/Plugin Developers Integrating w/ Comet Cache
 
