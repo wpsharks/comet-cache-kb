@@ -1,7 +1,7 @@
 ---
 title: How to Manually Upgrade Comet Cache Pro
 categories: tutorials
-tags: installation-upgrade
+tags: installation-upgrading
 author: raamdev
 github-issue: https://github.com/websharks/comet-cache-kb/issues/45
 toc-enable: off
