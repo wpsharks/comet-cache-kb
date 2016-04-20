@@ -1,7 +1,7 @@
 ---
 title: How can I restrict Comet Cache to the Primary Blog in a WP Multisite Environment?
 categories: questions
-tags: mu-plugins-hacks
+tags: mu-plugins-hacks, wp-multisite
 author: raamdev
 github-issue: https://github.com/websharks/comet-cache-kb/issues/57
 toc-enable: off
