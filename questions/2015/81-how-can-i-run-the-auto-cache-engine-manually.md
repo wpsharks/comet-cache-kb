@@ -23,5 +23,5 @@ If you're setting up a cron job inside the control panel with your web hosting c
 
 ### A few things to keep in mind
 
-- Running the CRON on your own doesn't change the fact that WordPress will still run it every 15 minutes (unless you specifically disable the Comet Cache CRON entry using a plugin such as [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/)).
+- Running the Auto-Cache Engine on your own doesn't change the fact that WordPress will still run it every 15 minutes (unless you specifically disable the Comet Cache cron job entry using a plugin such as [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/)).
 - Running the Auto-Cache Engine too often will just result in an overlap. In other words, consider the size of your site, your delay time, max run time, and if it's going to overlap from one process to another you'll want to be sure that you avoid this. Otherwise you will just have a whole bunch of running processes at the same time
