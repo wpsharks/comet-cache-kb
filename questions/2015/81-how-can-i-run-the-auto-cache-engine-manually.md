@@ -7,12 +7,18 @@ toc-enable: off
 github-issue: https://github.com/websharks/comet-cache-kb/issues/81
 ---
 
-The Auto-Cache Engine, when enabled, is scheduled to run every 15 minutes. If you want to run the Auto-Cache Engine manually, or if you want to create your own CRON job to define a custom schedule using a plugin such as [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/), you can do so by adding `?comet_cache_auto_cache_cron=1` to the end of your site's URL.
+The Auto-Cache Engine, when enabled, is scheduled to run every 15 minutes. If you want to run the Auto-Cache Engine manually, or if you want to create your own cron job to define a custom schedule using a plugin such as [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/), you can do so by adding `?comet_cache_auto_cache_cron=1` to the end of your site's URL.
 
-For example, if your site was `yoursite.com`, you could run the Auto-Cache Engine by calling the following URL:
+For example, if your site was `example.com`, you could run the Auto-Cache Engine by calling the following URL:
 
 ```text
-http://yoursite.com/?comet_cache_auto_cache_cron=1
+http://example.com/?comet_cache_auto_cache_cron=1
+```
+
+If you're setting up a cron job inside the control panel with your web hosting company, you can use a command like the following to call the URL using the cURL program (check with your hosting company for the exact path to `curl`):
+
+```text
+/usr/bin/curl http://example.com/?comet_cache_auto_cache_cron=1 -so /dev/null
 ```
 
 ### A few things to keep in mind
