@@ -29,7 +29,7 @@ add_filter('comet_cache_invalidate_when_logged_in_postload', function ($invalida
         return $invalidate; // Nothing to do here.
     }
     $request_uri = !empty($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
-    $is_wp_login_php = mb_strpos($_SERVER['REQUEST_URI'], '/wp-login.php') !== false;
+    $is_wp_login_php = mb_strpos($request_uri, '/wp-login.php') !== false;
     $action = !empty($_REQUEST['action']) ? $_REQUEST['action'] : ($is_wp_login_php ? 'login' : '');
 
     if ($is_wp_login_php && in_array($action, ['login', 'logout'], true)) {
