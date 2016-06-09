@@ -15,7 +15,7 @@ The problem with not strictly adhering to standards is that while you might be a
 
 The HTML Compressor does a very good job of detecting and concatenating CSS / JS by looking at the output of the raw HTML and searching for any JavaScript and CSS files that may be included on the page, along with any inline snippets. However, since each site will contain a unique combination of plugins and themes, each possibly adding its own CSS / JS, it's important for the HTML Compressor to include options for excluding specific files and allowing you to disable certain features.
 
-The Comet Cache HTML Compressor includes features for excluding specific CSS / JS files from compression: if you find a specific CSS / JS file added by a plugin or theme is causing problems when compressed, you can exclude that file from compression using the CSS and/or JavaScript Exclusion Patterns feature:
+The Comet Cache HTML Compressor includes features for excluding specific CSS / JS files from compression: if you find a specific CSS / JS file added by a plugin or theme is causing problems when compressed, you can exclude that file from compression using the CSS and/or JavaScript Exclusion Patterns feature (see [Watered-Down Regex Syntax](https://cometcache.com/kb-article/watered-down-regex-syntax/) for syntax examples):
 
 ![HTML Compressor - CSS / JS Exclusion Patterns](https://cloud.githubusercontent.com/assets/53005/15936522/591c5306-2e39-11e6-9e18-a7c340045f02.png)
 
