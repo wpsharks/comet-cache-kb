@@ -1,5 +1,5 @@
 ---
-title: What are Cross-Origin Request Blocked Errors?
+title: What are Cross-Origin Resource Sharing errors?
 categories: questions
 tags: static-cdn-filters
 author: raamdev
@@ -7,7 +7,7 @@ github-issue: https://github.com/websharks/comet-cache-kb/issues/92
 toc-enable: off
 ---
 
-Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the resource originated. If you are using Comet Cache Static CDN Filters and some of your website fonts are not loading, this may be the result of a Cross-origin Request Blocked error like the following:
+Cross-origin resource sharing (CORS) is a mechanism that allows restricted resources (e.g. fonts) on a web page to be requested from another domain outside the domain from which the resource originated. If you are using Static CDN Filters to serve static resources from another domain (i.e., the CDN) and some of your website fonts are not loading, your server might not be sending the necessary `Access-Control-Allow-Origin` header that allows the resource to be loaded from your CDN:
 
 ![Cross-Origin Request Blocked Error](https://cloud.githubusercontent.com/assets/53005/11160591/c842ee60-8a39-11e5-9195-207e20061481.png)
 
