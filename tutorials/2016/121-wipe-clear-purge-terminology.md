@@ -12,7 +12,7 @@ This article explains the different terminologies used by Comet Cache  when refe
 
 To "**wipe**", is to delete ALL files in the cache directory, for all hosts. This includes, but is not limited to, all systematic `cc-` prefixed files in the main `wp-content/cache/comet-cache/cache/cc-*` directory; and anything else for that matter. A full wipe of the cache can be performed by network admins on a MS network.
 
-A manual wipe is not necessary (or available) for standard WP installs in the Comet Cache UI. Networks only. That said, a full wipe is automatically performed by Comet Cache on both standard and network installs whenever CC options are changed, when the plugin is reactivated/upgraded; or when the plugin is deactivated and/or uninstalled. In the case of uninstalling, the entire CC base directory is removed also; i.e. `wp-content/cache/comet-cache`.
+A manual wipe is not necessary (or available) for standard WP installs in the Comet Cache UI; it is only available when Comet Cache is installed on a Multisite Network. That said, a full wipe is automatically performed by Comet Cache on both standard and network installs whenever Comet Cache options are changed, when the plugin is reactivated/upgraded; or when the plugin is deactivated and/or uninstalled. In the case of uninstalling, the entire Comet Cache base directory is removed also; i.e. `wp-content/cache/comet-cache`.
 
 ## Clear
 
