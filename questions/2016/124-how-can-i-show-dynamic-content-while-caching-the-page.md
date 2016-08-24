@@ -1,7 +1,7 @@
 ---
 title: How can I show dynamic content while caching the page?
 categories: questions
-tags: uri-exclusion-patterns
+tags: clearing-the-cache, uri-exclusion-patterns
 author: renzms
 github-issue: https://github.com/websharks/comet-cache-kb/issues/124
 ---
