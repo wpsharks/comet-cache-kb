@@ -35,11 +35,11 @@ server {
     text/css application/json application/x-javascript
     application/font-otf application/font-ttf;
   
-  # Do not allow public access to private cache directories.
-  # Note that `wp-content/cache/comet-cache/htmlc/public must remain public.
+  # Do not allow public access to private cache directory.
   if ($uri ~* /wp\-content/cache/comet\-cache/cache(?:/|$)) {
       return 403;
   }
+  # Do not allow public access to private cache directory.
   if ($uri ~* /wp\-content/cache/comet\-cache/htmlc/private(?:/|$)) {
       return 403;
   }
