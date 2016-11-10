@@ -35,10 +35,15 @@ server {
     text/css application/json application/x-javascript
     application/font-otf application/font-ttf;
   
-  # Do not allow public access to the cache directory.
+  # Do not allow public access to private cache directories.
+  # Note that `wp-content/cache/comet-cache/htmlc/public must remain public.
   if ($uri ~* /wp\-content/cache/comet\-cache/cache(?:/|$)) {
       return 403;
   }
+  if ($uri ~* /wp\-content/cache/comet\-cache/htmlc/private(?:/|$)) {
+      return 403;
+  }
+  
   # ↓ See: http://davidwalsh.name/cdn-fonts
   # This prevents cross-domain security issues related to fonts.
   # Only needed if you use Static CDN Filters in Comet Cache.
