@@ -8,19 +8,6 @@ github-issue: https://github.com/websharks/comet-cache-kb/issues/94
 
 True Regular Expressions (i.e., the full syntax) can be very handy for a variety of reasons. However, it is also quite complex. More complex than what most Comet Cache users need. So for that reason, Comet Cache supports a custom, watered-down version of regex. It can be used in exclusion patterns, custom URLs, and more. This provides a good balance between flexibility and simplicity.
 
-## Watered-Down Regex Syntax
-
-The syntax is parsed as plain text (i.e., what you type is what you get), but the following characters are special. These characters were taken from the original/official Regex syntax, and then modified slightly to behave in the following ways that are useful in Comet Cache:
-
-- `*` = 0 or more characters that are NOT a slash `/`
-- `**` = 0 or more characters of any kind, including `/` slashes
-- `^` = beginning of the string 
-- `$` = end of the string
-
-The following sections provide specific examples for each place within Comet Cache that the syntax can be used.
-
----
-
 ## Where is Watered-Down Regex supported in Comet Cache?
 
 Within Comet Cache, there are many areas that support watered-down regex syntax:
@@ -31,6 +18,23 @@ Within Comet Cache, there are many areas that support watered-down regex syntax:
 - User-Agent Exclusion
 - Sitemap URI
 - Specific URL 
+
+## Watered-Down Regex Syntax
+
+The syntax is parsed as plain text (i.e., what you type is what you get), but the following characters are special. These characters were taken from the original/official Regex syntax, and then modified slightly to behave in the following ways that are useful in Comet Cache:
+
+- `*` = 0 or more characters that are NOT a slash `/`
+- `**` = 0 or more characters of any kind, including `/` slashes.
+- `^` = beginning of the string _(not supported in all cases, see note below)_.
+- `$` = end of the string _(not supported in all cases, see note below)_.
+
+_**NOTE:** The `^` and `$` characters are supported by most Comet Cache features that utilize Watered-Down Regex Syntax. However, there are some notable exceptions; i.e., configuration fields where `^` and `$` will not work._
+
+- `^` and `$` are always on when configuring XML Sitemap Patterns under **Comet Cache → Config Options → Automatic Cache Clearing**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
+
+- `^` and `$` are always on when configuring Auto-Clear Custom URL Patterns under **Comet Cache → Config Options → Automatic Cache Clearing**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring Auto-Clear Custom URL Patterns.
+
+- `^` and `$` are always on when you attempt to clear a Specific URL using the Specific URL tool from the Comet Cache admin bar menu. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific URL.
 
 ## Watered-Down Regex Examples
 
@@ -47,11 +51,11 @@ In this example, adding the syntax `**` will exclude all custom URIs that start 
 
 -------
 
-### URI/Referer/User-Agent Exclusion Examples
+### URI Exclusion Examples
 
-See: **Dashboard → Comet Cache → Plugin Options → URI Exclusion Patterns/HTTP Referrer Exclusion Patterns/User-Agent Exclusion Patterns**.
+See: **Dashboard → Comet Cache → Plugin Options → URI Exclusion Patterns**
 
-For instance, if I want to exclude only the home page URI:
+If you want to exclude your home page URI, and only the home page URI:
 
 ```
 ^/$
@@ -65,9 +69,8 @@ To exclude a URI that begins with `/members/`, and only _that_ specific URI:
 ^/members/$
 ```
 
----
-
-Note the difference between `*` and `**`. To exclude URIs that start with `/members/` and anything beneath that slug, infinitely deep:
+_**Tip:** There is a difference between `*` and `**`._
+_To exclude URIs that start with `/members/` and match anything beneath that slug, infinitely deep, you would use `**` (double asterisk), which matches 0 or more characters of any kind, including `/` slashes._
 
 ```
 ^/members/**
@@ -96,15 +99,15 @@ To exclude any URI that simply contains `/members/` in it anywhere:
 
 ---
 
-To exclude any URI that simply contains `/member/`or `/members/` or `/member[SOMETHING]/` in it anywhere:
+To exclude any URI that simply contains `/member/`or `/members/` or `/member[something]/` in it anywhere:
 
 ```
 /member*/
 ```
 
-_Excludes: `/member/`, `/members/`, `/member-groups/`, `/member-info/`, and `/member/groups/` too, because there is no `^` or `$` specified._
+_Excludes: `/member/`, `/members/`, `/member-groups/`, `/member-info/`, and `/member/groups/` too, because there is no `^` or `$` specified; i.e., the match can occur anywhere in the URI, not necessarily from beginning to end._
 
--------
+---
 
 ### Auto-Clear XML Sitemap Pattern Examples
 
@@ -130,9 +133,9 @@ If you want to auto-clear `/sitemap.xml`, `/sitemap/pages/1.xml`, and `/sitemap/
 - or: `http://example.com[/base]/child-a/sitemap.xml`
 - and/or: `http://[MAPPED DOMAIN]/sitemap.xml` (for each domain mapped to child site A)
 
--------
+---
 
-### Clear Cache Options Menu: "Specific URL" Examples
+### Admin Bar Menu: Clearing "Specific URL" Examples
 
 ![Clear Cache Options: Specific URL](https://cloud.githubusercontent.com/assets/53005/11138107/295dcd5e-898c-11e5-9e08-b92899f1edc4.png)
 
