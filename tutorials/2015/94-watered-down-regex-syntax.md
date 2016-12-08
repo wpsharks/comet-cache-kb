@@ -30,9 +30,9 @@ The syntax is parsed as plain text (i.e., what you type is what you get), but th
 
 _**NOTE:** The `^` and `$` characters are supported by most Comet Cache features that utilize Watered-Down Regex Syntax. However, there are some notable exceptions; i.e., configuration fields where `^` and `$` will not work._
 
-- `^` and `$` are always on when configuring XML Sitemap Patterns under **Comet Cache → Config Options → Automatic Cache Clearing**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
+- `^` and `$` are always on when configuring XML Sitemap Patterns under **Comet Cache → Config Options → Automatic Cache Clearing → Sitemap-Related Options → XML Sitemap Patterns**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
 
-- `^` and `$` are always on when configuring Auto-Clear Custom URL Patterns under **Comet Cache → Config Options → Automatic Cache Clearing**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring Auto-Clear Custom URL Patterns.
+- `^` and `$` are always on when configuring Auto-Clear Custom URL Patterns under **Comet Cache → Config Options → Automatic Cache Clearing → Misc. Auto-Clear Options → Auto-Clear Custom URL Patterns**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring Auto-Clear Custom URL Patterns.
 
 - `^` and `$` are always on when you attempt to clear a Specific URL using the Specific URL tool from the Comet Cache admin bar menu. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific URL.
 
@@ -133,6 +133,8 @@ If you want to auto-clear `/sitemap.xml`, `/sitemap/pages/1.xml`, and `/sitemap/
 - or: `http://example.com[/base]/child-a/sitemap.xml`
 - and/or: `http://[MAPPED DOMAIN]/sitemap.xml` (for each domain mapped to child site A)
 
+**Regarding `^` and `$`**: For XML Sitemap Patterns, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
+
 ---
 
 ### Admin Bar Menu: Clearing "Specific URL" Examples
@@ -190,3 +192,9 @@ http://www.domain.com/membership/pageA/
 http://www.domain.com/membership/postB/
 http://www.domain.com/membership/group/
 ```
+
+**Regarding `^` and `$`**: When clearing a Specific URL, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific UR.
+
+
+
+
