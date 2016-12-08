@@ -12,12 +12,12 @@ True Regular Expressions (i.e., the full syntax) can be very handy for a variety
 
 Within Comet Cache, there are many areas that support watered-down regex syntax:
 
-- URI Exclusion Patterns (supports the full syntax)
-- HTTP Referrer Exclusion Patterns (supports the full syntax)
-- User-Agent Exclusion Patterns (supports the full syntax)
-- Auto-Clear XML Sitemap Patterns (`^` and `$` are not accepted)
-- Auto-Clear Custom URL Patterns (`^` and `$` are not accepted)
-- Clearing a Specific URL Pattern (`^` and `$` are not accepted)
+- **URI Exclusion Patterns** _(supports the full syntax)_
+- **HTTP Referrer Exclusion Patterns** _(supports the full syntax)_
+- **User-Agent Exclusion Patterns** _(supports the full syntax)_
+- **Auto-Clear XML Sitemap Patterns** _(`^` and `$` are not accepted)_
+- **Auto-Clear Custom URL Patterns** _(`^` and `$` are not accepted)_
+- **Clearing a Specific URL Pattern** _(`^` and `$` are not accepted)_
 
 ## Watered-Down Regex Syntax
 
@@ -129,15 +129,15 @@ If you want to auto-clear `/sitemap.xml`, `/sitemap/pages/1.xml`, and `/sitemap/
 
 ---
 
-**A note regarding WP Multisite**: Any domains mapped to the current site are cleared automatically. In other words, if you enter `/sitemap**.xml` (the default value for that field) then whenever the cache is cleared for Child Site A, the following are cleared automatically:
+_**A note regarding WP Multisite**: Any domains mapped to the current site are cleared automatically. In other words, if you enter `/sitemap**.xml` (the default value for that field) then whenever the cache is cleared for Child Site A, the following are cleared automatically:_
 
-- `http://child-a.example.com/sitemap.xml`
-- or: `http://example.com[/base]/child-a/sitemap.xml`
-- and/or: `http://[MAPPED DOMAIN]/sitemap.xml` (for each domain mapped to child site A)
+- _`http://child-a.example.com/sitemap.xml`_
+- _or: `http://example.com[/base]/child-a/sitemap.xml`_
+- _and/or: `http://[MAPPED DOMAIN]/sitemap.xml` (for each domain mapped to child site A)_
 
 ---
 
-**A note regarding `^` and `$`**: For XML Sitemap Patterns, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
+_**A note regarding `^` and `$`**: For XML Sitemap Patterns, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns._
 
 ---
 
@@ -199,7 +199,7 @@ http://www.domain.com/membership/group/
 
 ---
 
-**A note regarding `^` and `$`**: When clearing a Specific URL, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific UR.
+_**A note regarding `^` and `$`**: When clearing a Specific URL, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific URL._
 
 
 
