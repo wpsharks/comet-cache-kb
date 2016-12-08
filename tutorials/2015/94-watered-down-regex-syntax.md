@@ -8,7 +8,7 @@ github-issue: https://github.com/websharks/comet-cache-kb/issues/94
 
 True Regular Expressions (i.e., the full syntax) can be very handy for a variety of reasons. However, it is also quite complex. More complex than what most Comet Cache users need. So for that reason, Comet Cache supports a custom, watered-down version of regex. It can be used in exclusion patterns, custom URLs, and more. This provides a good balance between flexibility and simplicity.
 
-## Where is Watered-Down Regex supported in Comet Cache?
+## Where is Watered-Down Regex Supported?
 
 Within Comet Cache, there are many areas that support watered-down regex syntax:
 
