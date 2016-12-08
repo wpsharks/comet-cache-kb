@@ -12,12 +12,12 @@ True Regular Expressions (i.e., the full syntax) can be very handy for a variety
 
 Within Comet Cache, there are many areas that support watered-down regex syntax:
 
-- Custom URLs
-- URI Exclusion
-- HTTP Referrer Exclusion
-- User-Agent Exclusion
-- Sitemap URI
-- Specific URL 
+- URI Exclusion Patterns (supports the full syntax)
+- HTTP Referrer Exclusion Patterns (supports the full syntax)
+- User-Agent Exclusion Patterns (supports the full syntax)
+- Auto-Clear XML Sitemap Patterns (`^` and `$` are not accepted)
+- Auto-Clear Custom URL Patterns (`^` and `$` are not accepted)
+- Clearing a Specific URL Pattern (`^` and `$` are not accepted)
 
 ## Watered-Down Regex Syntax
 
@@ -127,13 +127,17 @@ If you want to auto-clear `/sitemap.xml`, `/sitemap/pages/1.xml`, and `/sitemap/
 /sitemap**.xml
 ```
 
+---
+
 **A note regarding WP Multisite**: Any domains mapped to the current site are cleared automatically. In other words, if you enter `/sitemap**.xml` (the default value for that field) then whenever the cache is cleared for Child Site A, the following are cleared automatically:
 
 - `http://child-a.example.com/sitemap.xml`
 - or: `http://example.com[/base]/child-a/sitemap.xml`
 - and/or: `http://[MAPPED DOMAIN]/sitemap.xml` (for each domain mapped to child site A)
 
-**Regarding `^` and `$`**: For XML Sitemap Patterns, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
+---
+
+**A note regarding `^` and `$`**: For XML Sitemap Patterns, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
 
 ---
 
@@ -168,7 +172,7 @@ If you also wanted to match anything that might come _after_ `my-account` (e.g.,
 **domain.com/my-account**
 ```
 
--------
+---
 
 To clear the cache for any specific URI that contains `/membership/` or `/memberships/` or `/membership[SOMETHING]/` in it
 
@@ -176,7 +180,7 @@ To clear the cache for any specific URI that contains `/membership/` or `/member
 http://www.domain.com/membership*/
 ```
 
--------
+---
 
 To clear the cache for `/membership/` and any pages or posts beneath it, one level deep, add `*` at the end of the URL:
 
@@ -193,7 +197,9 @@ http://www.domain.com/membership/postB/
 http://www.domain.com/membership/group/
 ```
 
-**Regarding `^` and `$`**: When clearing a Specific URL, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific UR.
+---
+
+**A note regarding `^` and `$`**: When clearing a Specific URL, `^` and `$` are always on. Patterns must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific UR.
 
 
 
