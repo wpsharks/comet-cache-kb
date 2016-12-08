@@ -25,16 +25,8 @@ The syntax is parsed as plain text (i.e., what you type is what you get), but th
 
 - `*` = 0 or more characters that are NOT a slash `/`
 - `**` = 0 or more characters of any kind, including `/` slashes.
-- `^` = beginning of the string _(not supported in all cases, see note below)_.
-- `$` = end of the string _(not supported in all cases, see note below)_.
-
-_**NOTE:** The `^` and `$` characters are supported by most Comet Cache features that utilize Watered-Down Regex Syntax. However, there are some notable exceptions; i.e., configuration fields where `^` and `$` will not work._
-
-- `^` and `$` are always on when configuring XML Sitemap Patterns under **Comet Cache → Config Options → Automatic Cache Clearing → Sitemap-Related Options → XML Sitemap Patterns**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring XML Sitemap Patterns.
-
-- `^` and `$` are always on when configuring Auto-Clear Custom URL Patterns under **Comet Cache → Config Options → Automatic Cache Clearing → Misc. Auto-Clear Options → Auto-Clear Custom URL Patterns**. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when configuring Auto-Clear Custom URL Patterns.
-
-- `^` and `$` are always on when you attempt to clear a Specific URL using the Specific URL tool from the Comet Cache admin bar menu. Patterns entered there must always match from beginning to end, and for that reason, `^` and `$` are always applied (internally). You should avoid using `^` and `$` when clearing a Specific URL.
+- `^` = beginning of the string _(not supported in all cases, see list above)_.
+- `$` = end of the string _(not supported in all cases, see list above)_.
 
 ## Watered-Down Regex Examples
 
