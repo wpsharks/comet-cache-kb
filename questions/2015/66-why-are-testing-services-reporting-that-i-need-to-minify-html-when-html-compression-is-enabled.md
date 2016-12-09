@@ -24,4 +24,4 @@ This is most likely because you have the HTML Notes enabled, to allow you to se 
 
 To fix this, simply disable the HTML Notes in **WordPress Dashboard → Comet Cache → Plugin Options → Enable/Disable** by setting the option to _"No, I don't want my source code to contain any of these notes"_:
 
-![2015-04-29_12-48-42](https://cloud.githubusercontent.com/assets/53005/7396616/85570290-ee70-11e4-907d-36c6505b7113.png)
+![Comet Cache: Enable/Disable](https://cloud.githubusercontent.com/assets/7514953/21015890/96f91e44-bd9e-11e6-8ae1-60bda7c8f7fe.png)
