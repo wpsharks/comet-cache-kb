@@ -20,7 +20,7 @@ Please create the `wp-content/mu-plugins/` directory if it does not already exis
 
 ## Disabling 'Clear Cache' Routines
 
-Inside `wp-content/mu-plugins/` create this file: `zc-disable-auto-clear-cache-routines.php`:
+Inside `wp-content/mu-plugins/` create this file: `cc-disable-auto-clear-cache-routines.php`:
 
 ```php
 <?php
@@ -32,17 +32,12 @@ Version: 1.0
 Author URI: http://www.websharks-inc.com
 */
 
-add_filter('comet_cache_disable_auto_clear_cache_routines', '__comet_cache_disable_auto_clear_cache_routines', 10, 0);
-
-function __comet_cache_disable_auto_clear_cache_routines() {
-	return TRUE; // Yes, disable Comet Cache Clear Routines
-}
-
+add_filter('comet_cache_disable_auto_clear_cache_routines', '__return_true', 10, 0);
 ```
 
 ## Disabling 'Wipe Cache' Routines
 
-Inside `wp-content/mu-plugins/` create this file: `zc-disable-auto-wipe-cache-routines.php`:
+Inside `wp-content/mu-plugins/` create this file: `cc-disable-auto-wipe-cache-routines.php`:
 
 ```php
 <?php
@@ -54,16 +49,12 @@ Version: 1.0
 Author URI: http://www.websharks-inc.com
 */
 
-add_filter('comet_cache_disable_auto_wipe_cache_routines', '__comet_cache_disable_auto_wipe_cache_routines', 10, 0);
-
-function __comet_cache_disable_auto_wipe_cache_routines() {
-	return TRUE; // Yes, disable Comet Cache Wipe Cache Routines
-}
+add_filter('comet_cache_disable_auto_wipe_cache_routines', '__return_true', 10, 0);
 ```
 
 ## Disabling both the 'Clear Cache' and 'Wipe Cache' Routines
 
-Inside `wp-content/mu-plugins/` create this file: `zc-disable-auto-clear-wipe-cache-routines.php`:
+Inside `wp-content/mu-plugins/` create this file: `cc-disable-auto-clear-wipe-cache-routines.php`:
 
 ```php
 <?php
@@ -75,10 +66,6 @@ Version: 1.0
 Author URI: http://www.websharks-inc.com
 */
 
-add_filter('comet_cache_disable_auto_wipe_cache_routines', '__comet_cache_disable_auto_clear_wipe_cache_routines', 10, 0);
-add_filter('comet_cache_disable_auto_clear_cache_routines', '__comet_cache_disable_auto_clear_wipe_cache_routines', 10, 0);
-
-function __comet_cache_disable_auto_clear_wipe_cache_routines() {
-	return TRUE; // Yes, disable Comet Cache Clear and Wipe Cache Routines
-}
+add_filter('comet_cache_disable_auto_wipe_cache_routines', '__return_true', 10, 0);
+add_filter('comet_cache_disable_auto_clear_cache_routines', '__return_true', 10, 0);
 ```
