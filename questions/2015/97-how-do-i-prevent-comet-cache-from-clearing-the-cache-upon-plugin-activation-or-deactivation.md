@@ -22,10 +22,5 @@ Version: 1.0
 Author URI: http://www.websharks-inc.com
 */
 
-add_filter('comet_cache_auto_clear_on_plugin_activation_deactivation', '__comet_cache_auto_clear_on_plugin_activation_deactivation', 10, 0);
-
-function __comet_cache_auto_clear_on_plugin_activation_deactivation() {
-	return FALSE; // Disable the automatic clear cache on plugin activation/deactivation
-}
-
+add_filter('comet_cache_auto_clear_on_plugin_activation_deactivation', '__return_false', 10, 0);
 ```
