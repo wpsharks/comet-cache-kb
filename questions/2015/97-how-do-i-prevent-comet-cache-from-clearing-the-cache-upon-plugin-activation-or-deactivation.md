@@ -10,7 +10,7 @@ Comet Cache will automatically clear the cache on your site whenever you activat
 
 If you are activating and deactivating plugins on a regular basis and want manual control over when the cache is cleared, you can disable this automatic behavior by creating a small [MU-Plugin](http://codex.wordpress.org/Must_Use_Plugins).
 
-Create this file and directory: `wp-content/mu-plugins/zc-disable-clear-on-plugin-activate-deactivate.php`:
+Create this file and directory: `wp-content/mu-plugins/cc-disable-clear-on-plugin-activate-deactivate.php`:
 
 ```php
 <?php
