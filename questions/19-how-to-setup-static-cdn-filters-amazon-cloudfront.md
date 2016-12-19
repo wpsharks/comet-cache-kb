@@ -19,6 +19,8 @@ However, if you want to associate your CloudFront distribution with your own dom
 
 The wording in the AWS interface changed slightly since this video was done. The option you want to choose from the dropdown is now titled, _"Forward all, cache based on all"_.
 
+![amazon-aws-cloudfront-fwd-query-strings](https://cloud.githubusercontent.com/assets/53005/21319493/73d0366a-c5db-11e6-965b-5a448800d642.png)
+
 ### See also:
 
 - [Introduction to Static CDN Filters](http://cometcache.com/kb-article/introduction-to-static-cdn-filters/)
