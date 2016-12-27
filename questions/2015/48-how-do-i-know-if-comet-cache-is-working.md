@@ -9,7 +9,8 @@ toc-enable: on
 
 Comet Cache will add "HTML Notes" to the bottom of every page when it Comet Cache enabled and you have the HTML Notes option enabled (enabled by default). To verify that Comet Cache is enabled and the HTML Notes option is turned on, visit **Comet Cache → Plugin Options → Enable/Disable**:
 
-![2015-03-21_20-51-57](https://cloud.githubusercontent.com/assets/53005/6767556/b5b0c124-d00c-11e4-8ca4-ba13a16295f3.png)
+![comet-cache-enabled](https://cloud.githubusercontent.com/assets/53005/21502172/034740ae-cc1c-11e6-8d5c-e59d0a3fbd13.png)
+
 
 Once you have verified that Comet Cache is enabled and the HTML Notes option is turned on, you can logout of WordPress (caching is disabled for logged-in users by default, so you'll need to logout) and then visit the home page of your site and choose the "View Source" option in your browser:
 
@@ -21,7 +22,7 @@ Once you have verified that Comet Cache is enabled and the HTML Notes option is 
 
 You'll want to scroll all the way to the bottom of the source and look for the HTML Notes added by Comet Cache. They should look something like this:
 
-![2015-03-21_20-47-55](https://cloud.githubusercontent.com/assets/53005/6767563/f80d40ce-d00c-11e4-8891-0f110a005d97.png)
+![comet-cache-html-notes](https://cloud.githubusercontent.com/assets/53005/21502173/04666e74-cc1c-11e6-95cd-456811e622e1.png)
 
 If you see "Comet Cache fully functional", then you know Comet Cache is enabled and working properly.
 
