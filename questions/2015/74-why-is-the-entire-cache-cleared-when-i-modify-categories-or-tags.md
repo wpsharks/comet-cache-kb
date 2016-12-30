@@ -9,7 +9,7 @@ toc-enable: off
 
 One of Comet Cache's most important tasks is ensuring that an outdated version of the site does not get served to visitors. If you change something on the WordPress Dashboard that affects the front-end of the site, Comet Cache will make sure that it clears the old version of any related cache files so that a new, updated version of the cache can be generated.
 
-Comet Cache clears the cache in the most intelligent way possible, however there are some events that may trigger a clearing of the entire cache. These are considered "significant events" that affect _many_ areas of a site. Some of these include changing WordPress settings, installing a plugin or a theme, and adding, editing, or deleting Categories and Tags.
+Comet Cache clears the cache in the most intelligent way possible. It does this by monitoring events in WordPress. There are some events that may trigger a clearing of the entire cache. These are considered "significant events" that affect _many_ areas of a site and therefore Comet Cache has no choice but to clear the entire cache. Examples include changing WordPress settings, installing a plugin or a theme, and adding, editing, or deleting Categories and Tags.
 
 ## What's so special about Categories and Tags? 
 
@@ -24,6 +24,10 @@ There are so many places on the front-end of the site, so many places that may a
 ## Why is the cache being cleared when I save a new Post as Draft?
 
 Creating a new post and saving it as a Draft does not clear the cache, but creating a new post, _and then creating a new Tag/Category and assigning it to the post_, and then saving the post as a Draft _will_ clear the entire cache (again, creating a new Category / Tag is one of those major events that if we don't clear the cache could result in an outdated version of the site being served to visitors).
+
+## Why is the cache cleared when I activate or deactivate a plugin?
+
+Clearing the entire cache on activation/deactivation of a plugin occurs because Comet Cache has no way of knowing if the plugin being activated or deactivated is designed to change the output on the front-end of your site. If the plugin being activated or deactivated does affect the front-end of the site, then activating or deactivating that plugin would cause the entire cache to become outdated. For that reason, Comet Cache clears the entire cache to be safe.
 
 ## How can I disable the Automatic Clear / Wipe Cache Routines?
 
