@@ -4,7 +4,7 @@ categories: questions
 tags: clearing-the-cache
 author: raamdev
 github-issue: https://github.com/websharks/comet-cache-kb/issues/74
-toc-enable: off
+toc-enable: on
 ---
 
 One of Comet Cache's most important tasks is ensuring that an outdated version of the site does not get served to visitors. If you change something on the WordPress Dashboard that affects the front-end of the site, Comet Cache will make sure that it clears the old version of any related cache files so that a new, updated version of the cache can be generated.
