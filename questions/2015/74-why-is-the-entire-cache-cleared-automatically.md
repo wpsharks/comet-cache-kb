@@ -1,5 +1,5 @@
 ---
-title: Why is the entire cache cleared when I modify Categories or Tags?
+title: Why is the entire cache cleared automatically?
 categories: questions
 tags: clearing-the-cache
 author: raamdev
