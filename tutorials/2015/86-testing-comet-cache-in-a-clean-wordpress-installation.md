@@ -12,7 +12,7 @@ Here in the WebSharks support department, we receive many bug reports that are d
 
 **Reason**: WordPress offers you lots of options! As a site owner you have the ability to mix Comet Cache with other plugins and a theme you like best. So the reason we are unable to reproduce the issue on our side? Your environment is slightly different than ours. Your WordPress installation has different plugins, it's had a different history, and it's probably running with a different theme too. Comet Cache also writes cache files to the server and interacts with other server software quite frequently and your server-side configuration is likely different from ours.
 
-As you can imagine, testing every feature of Comet Cache with every possible combination of plugins, and with each and every theme and server configuration that exists for WordPress — is simply not realistic. **We need common ground! In fact, [our policy](https://www.websharks-inc.com/support/) is that we require it :-)**
+As you can imagine, testing every feature of Comet Cache with every possible combination of plugins, and with each and every theme and server configuration that exists for WordPress — is simply not realistic. **We need common ground! In fact, [our policy](https://wpsharks.com/support-policy) is that we require it :-)**
 
 ## Reproduce Problems in a Clean WordPress Environment
 
@@ -30,11 +30,11 @@ If you're integrating Comet Cache into a larger set of themes/plugins, we ask th
 
 ## Our Support Policy
 
-Support policy: <https://www.websharks-inc.com/support/>
+Support policy: <https://wpsharks.com/support-policy>
 
->We will NOT provide support and/or troubleshooting assistance for any Product which has been integrated with another 3rd-party theme or plugin. If you discover a bug, or an inconsistent behavior with a Product which is integrated into a mixture of other themes/plugins for WordPress®, we ask that you start by disabling all other plugins and revert to the default theme for your current version of WordPress®.
+> We will not provide support and/or troubleshooting assistance for any Product which has been integrated with another 3rd-party theme or plugin. If you discover a bug, or an inconsistent behavior with a Product which is integrated into a mixture of other themes/plugins for WordPress, we ask that you start by disabling all other plugins and revert to the default theme for your current version of WordPress.
 
->If problems persist, even in the default theme for WordPress®, and no other plugins are active, we are happy to help. Otherwise, if you are integrating our Products into a larger set of themes/plugins, we ask that you seek assistance from an experienced WordPress® developer who can do a full review of your site and make the proper recommendations (e.g. helping you resolve conflicts between all plugins working together).
+> If problems persist, even in a default theme for WordPress, and no other plugins are active, we are happy to help. Otherwise, if you are integrating our Products into a larger set of themes/plugins, we ask that you seek assistance from an experienced WordPress developer who can do a full review of your site and make the proper recommendations (e.g., helping you resolve conflicts between all plugins working together).
 
 ## How to Report Plugin/Theme Conflicts
 
