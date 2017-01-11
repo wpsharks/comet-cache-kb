@@ -1,14 +1,15 @@
 ---
-title: Testing Comet Cache in a Clean WordPress Installation
+title: Test in a Clean WordPress Installation
 categories: tutorials
 tags: troubleshooting
 author: patdumond
+slug: testing-comet-cache-in-a-clean-wordpress-installation
 github-issue: https://github.com/websharks/comet-cache-kb/issues/86
 ---
 
 ## Is it Really a Bug?
 
-We receive many bug reports that are difficult and/or impossible to reproduce on our side of things. A site owner will write to us and say, "feature X is not working as expected". One of our staff will follow-up by testing that specific feature, but the problem doesn't exist on our side. Hmmm... what gives? **How can that be?**
+We receive many bug reports that are difficult and/or impossible to reproduce on our side of things. A site owner will write to us and say, "feature X is not working as expected". One of our staff will follow-up by testing that specific feature, but the problem doesn't exist on our side. Hmm... what gives? How can that be?
 
 **Reason**: WordPress offers you lots of options! As a site owner you have the ability to mix Comet Cache with other plugins and a theme you like best. So the reason we are unable to reproduce the issue on our side? Your environment is slightly different than ours. Your WordPress installation has different plugins, it has had a different history, and it's probably running with a different theme too. Comet Cache also writes cache files to the server and interacts with other server software quite frequently and your server-side configuration is likely different from ours.
 
