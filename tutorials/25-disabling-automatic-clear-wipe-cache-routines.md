@@ -27,9 +27,9 @@ Inside `wp-content/mu-plugins/` create this file: `cc-disable-auto-clear-cache-r
 /*
 Plugin Name: Disable Comet Cache Clear Routines
 Description: Disables all automatic Comet Cache Clear Routines
-Author: WebSharks, Inc.
+Author: Comet Cache
 Version: 1.0
-Author URI: http://www.websharks-inc.com
+Author URI: https://cometcache.com/
 */
 
 add_filter('comet_cache_disable_auto_clear_cache_routines', '__return_true', 10, 0);
@@ -44,9 +44,9 @@ Inside `wp-content/mu-plugins/` create this file: `cc-disable-auto-wipe-cache-ro
 /*
 Plugin Name: Disable Comet Cache Wipe Cache Routines
 Description: Disables all automatic Comet Cache Wipe Cache Routines
-Author: WebSharks, Inc.
+Author: Comet Cache
 Version: 1.0
-Author URI: http://www.websharks-inc.com
+Author URI: https://cometcache.com/
 */
 
 add_filter('comet_cache_disable_auto_wipe_cache_routines', '__return_true', 10, 0);
@@ -61,11 +61,28 @@ Inside `wp-content/mu-plugins/` create this file: `cc-disable-auto-clear-wipe-ca
 /*
 Plugin Name: Disable Comet Cache Clear and Wipe Cache Routines
 Description: Disables all automatic Comet Cache Clear and Wipe Cache Routines
-Author: WebSharks, Inc.
+Author: Comet Cache
 Version: 1.0
-Author URI: http://www.websharks-inc.com
+Author URI: https://cometcache.com/
 */
 
 add_filter('comet_cache_disable_auto_wipe_cache_routines', '__return_true', 10, 0);
 add_filter('comet_cache_disable_auto_clear_cache_routines', '__return_true', 10, 0);
+```
+
+## Disabling the 'Clear Cache' Routines on Plugin Activation/Deactivation
+
+Inside `wp-content/mu-plugins/` create this file: `cc-disable-auto-clear-wipe-cache-routines.php`:
+
+```php
+<?php
+/*
+Plugin Name: Disable Comet Cache Clear Routines on Plugin Activation/Deactivation
+Description: Disables all automatic Comet Cache Clear Routines on Plugin Activation/Deactivation
+Author: Comet Cache
+Version: 1.0
+Author URI: https://cometcache.com/
+*/
+
+add_filter('comet_cache_auto_clear_on_plugin_activation_deactivation', '__return_false', 10, 0);
 ```
