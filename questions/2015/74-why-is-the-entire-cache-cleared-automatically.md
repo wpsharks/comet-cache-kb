@@ -29,6 +29,8 @@ Creating a new post and saving it as a Draft does not clear the cache, but creat
 
 Clearing the entire cache on activation/deactivation of a plugin occurs because Comet Cache has no way of knowing if the plugin being activated or deactivated is designed to change the output on the front-end of your site. If the plugin being activated or deactivated does affect the front-end of the site, then activating or deactivating that plugin would cause the entire cache to become outdated. For that reason, Comet Cache clears the entire cache to be safe.
 
+See also: [Disabling the 'Clear Cache' Routines on Plugin Activation/Deactivation](https://cometcache.com/kb-article/disabling-automatic-clear-wipe-cache-routines/#toc-5ec8535a)
+
 ## How can I disable the Automatic Clear / Wipe Cache Routines?
 
 If you'd like to disable all of these automatic cache wiping routines and take full manual control of when to wipe the entire cache (using the "Clear Cache" button), they can do that using an MU-Plugin:
