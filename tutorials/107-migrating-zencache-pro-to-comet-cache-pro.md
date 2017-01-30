@@ -8,7 +8,7 @@ github-issue: https://github.com/websharks/zencache-kb/issues/107
 
 When installing the Comet Cache Pro plugin, Comet Cache will automatically detect and preserve any existing ZenCache Pro settings. All of this happens automatically; all you need to do is deactivate ZenCache and then install the Comet Cache plugin. Once you have verified that your ZenCache settings were migrated over, you can delete the ZenCache plugin.
 
-See also: [Announcing Comet Cache™ (formerly ZenCache)](http://cometcache.com/announcing-comet-cache-formerly-zencache/).
+See also: [Announcing Comet Cache™ (formerly ZenCache)](http://cometcache.com/blog/announcing-comet-cache-formerly-zencache/).
 
 ## Step-by-Step: Migrating from ZenCache Pro to Comet Cache Pro
 
