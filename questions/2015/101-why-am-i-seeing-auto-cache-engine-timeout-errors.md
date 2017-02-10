@@ -22,7 +22,7 @@ If you _constantly_ see the XML Sitemap timeout error and you are certain that t
 
 ## Auto-Cache Timeout Errors
 
-If you are seeing timeout errors in your `/cache/comet-cache/cache/cc-auto-cache.log` file, they probably look like this:
+If you are seeing timeout errors in your `wp-content/cache/comet-cache/cache/cc-auto-cache.log` file, they probably look like this:
 
 ```
 Time: Mon, 01 Sep 14 22:25:50 +0000
