@@ -12,7 +12,7 @@ The Auto-Cache Engine uses the WordPress HTTP API to make requests for verifying
 
 If you are using the Auto-Cache Engine and you receive a timeout error on the Dashboard, it probably looks something like this:
 
-![Comet Cache XML Sitemap Timeout Error](https://cloud.githubusercontent.com/assets/53005/12054063/716d70d2-aeed-11e5-9ec2-45cd39c9057d.png)
+![Comet Cache XML Sitemap Timeout Error](https://cloud.githubusercontent.com/assets/53005/22809716/2db8faea-ef02-11e6-989c-7450e791cd3b.png)
 
 This error indicates that Comet Cache was unable to fetch your XML Sitemap within the timeout period. Comet Cache needs to be able to access your XML Sitemap to know which pages on your site it should auto-cache.
 
@@ -22,7 +22,7 @@ If you _constantly_ see the XML Sitemap timeout error and you are certain that t
 
 ## Auto-Cache Timeout Errors
 
-If you are seeing timeout errors in your `/cache/comet-cache/cache/zc-auto-cache.log` file, they probably look like this:
+If you are seeing timeout errors in your `/cache/comet-cache/cache/cc-auto-cache.log` file, they probably look like this:
 
 ```
 Time: Mon, 01 Sep 14 22:25:50 +0000
