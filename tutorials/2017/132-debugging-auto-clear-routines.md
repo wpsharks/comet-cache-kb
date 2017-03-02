@@ -15,7 +15,7 @@ If you find that the cache is being cleared unexpectedly for some reason, you mi
 
 ## Locating the Proper Auto-Clear Function
 
-There are many Auto-Clear functions in Comet Cache, some specialized and some more general. For example, [`autoClearHomePageCache()`](https://github.com/websharks/comet-cache/blob/170220/src/includes/traits/Plugin/WcpHomeBlogUtils.php#L8-L47) is used to clear the Home Page cache and [`autoClearPostCache()`](https://github.com/websharks/comet-cache/blob/170220/src/includes/traits/Plugin/WcpPostUtils.php#L8-L112) is used when clearing the cache for a specific Post.
+There are many Auto-Clear functions in Comet Cache, some specialized and some more general. For example, `autoClearHomePageCache()` (in [src/includes/traits/Plugin/WcpHomeBlogUtils.php](https://github.com/websharks/comet-cache/blob/170220/src/includes/traits/Plugin/WcpHomeBlogUtils.php#L8-L47)) is used to clear the Home Page cache and `autoClearPostCache()` (in [src/includes/traits/Plugin/WcpPostUtils.php](https://github.com/websharks/comet-cache/blob/170220/src/includes/traits/Plugin/WcpPostUtils.php#L8-L112)) is used when clearing the cache for a specific Post.
 
 The Auto-Clear routines are in several different files, but you'll note that they all start with `Wcp` and they're all located in `src/includes/traits/Plugin/`. 
 
