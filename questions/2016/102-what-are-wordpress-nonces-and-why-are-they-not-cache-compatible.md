@@ -44,7 +44,7 @@ One important thing to keep in mind if you choose to allow nonce caching is the 
 
 ## WordPress Nonce Lifetime
 
-WordPress nonces have a default lifetime of 1 day from the time they were created. If you choose to allow nonce caching, the best way to avoid issues with caching expired nonce values is to set your cache expiration (**Dashboard → Comet Cache → Plugin Options → Directory / Expiration Time**) to 1 day or less.
+WordPress nonces have a default lifetime of 1 day from the time they were created. If you choose to allow nonce caching, the best way to avoid issues with caching expired nonce values is to set your cache expiration (**Dashboard → Comet Cache → Plugin Options → Cache Expiration Time**) to 1 day or less.
 
 The default Cache Expiration time is 7 days, which means that a cache file will not be recreated for at least 7 days. If you are allowing Comet Cache to cache nonce values, a 7 day cache expiration is too long because an expired nonce value could be cached for a full 6 days, which is plenty of time to cause problems for users.
 
