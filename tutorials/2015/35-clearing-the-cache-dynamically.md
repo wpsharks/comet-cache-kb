@@ -114,6 +114,12 @@ function clear_current_user_cache( ) {
 }
 ```
 
+## Scheduling Custom Clear Cache Events
+
+If you need to schedule a custom clear cache event to occur at a recurring time, you can use the [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/) plugin to add a custom PHP Cron Event that makes one or more Comet Cache API calls at a specified interval. After installing WP Crontrol, visit **Dashboard → Tools → Cron Events → Add PHP Cron Event** to add a new cron event. 
+
+![WP Crontrol - Add PHP Cron Event](https://user-images.githubusercontent.com/53005/27929814-717c7346-6262-11e7-870d-46762f031912.png)
+
 ## Using the Comet Cache API Class
 
 If you need to call the Comet Cache API from another PHP file, you will first need to load the WordPress framework (via `wp-load.php`). See the examples below.
