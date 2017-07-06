@@ -34,11 +34,9 @@ function my_custom_clear_cache( ) {
 
 ### Clear page cache when Custom Post Type is saved
 
-_**Note:** The API call used below requires Comet Cache Pro._
-
 Using the `save_post_{$post_type}` hook, which is fired whenever that custom post type is created or updated (see [docs](http://codex.wordpress.org/Plugin_API/Action_Reference/save_post)), you can use something like the following to clear the cache for a given page whenever a post with that custom post type is saved.
 
-**Comet Cache Pro**
+**Comet Cache Lite or Comet Cache Pro**
 
 ```php
 add_action( 'save_post_my-custom-post-type', 'clear_cache_for_page_id_5', 10, 1 );
@@ -50,13 +48,27 @@ function clear_cache_for_page_id_5( ) {
 
 You'll want to change `5` to the ID of the Page/Post whose cache you'd like to clear when that custom post type is saved, and you'll want to change `my-custom-post-type` to the actual name of your Custom Post Type.
 
-### Clear a specific page cache when saving any post
+### Clear a specific URL cache when saving any post
 
-_**Note:** The API call used below requires Comet Cache Pro._
+Using the `save_post` hook, which is fired whenever a post created or updated (see [docs](http://codex.wordpress.org/Plugin_API/Action_Reference/save_post)), you can use something like the following to clear the cache for a given URL on your site.
+
+**Comet Cache Lite or Comet Cache Pro**
+
+```php
+add_action( 'save_post', 'clear_cache_for_page_url', 10, 1 );
+
+function clear_cache_for_page_url( ) {
+	comet_cache::clearUrl('http://example.com/sample-page/'); // Clears cache for page with URL http://example.com/sample-page/
+}
+```
+
+You'll want to change `http://example.com/sample-page/` to the URL of the Page/Post whose cache you'd like to clear. Note that you can also use the [Watered-Down Regex Syntax](https://cometcache.com/kb-article/watered-down-regex-syntax/) in this URL.
+
+### Clear a specific page cache when saving any post
 
 Using the `save_post` hook, which is fired whenever a post created or updated (see [docs](http://codex.wordpress.org/Plugin_API/Action_Reference/save_post)), you can use something like the following to clear the cache for a given page.
 
-**Comet Cache Pro**
+**Comet Cache Lite or Comet Cache Pro**
 
 ```php
 add_action( 'save_post', 'clear_cache_for_page_id_5', 10, 1 );
